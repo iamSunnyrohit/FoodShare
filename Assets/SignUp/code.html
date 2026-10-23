@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>FoodShare - Community Food Rescue &amp; Sharing</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-lowest": "#ffffff", "secondary-fixed": "#c8eadc", "surface-container-low": "#eaf7ed", "surface-bright": "#f0fdf3", "inverse-primary": "#89d7a1", "secondary-fixed-dim": "#accec1", "error-container": "#ffdad6", "secondary": "#46655a", "on-primary": "#ffffff", "on-tertiary-container": "#fff0e7", "tertiary-fixed": "#ffdcc3", "surface-variant": "#d9e6dc", "surface-container": "#e4f1e7", "on-primary-fixed": "#00210e", "surface-tint": "#1a6c40", "on-secondary": "#ffffff", "outline-variant": "#bfc9be", "on-secondary-fixed": "#012018", "on-background": "#131e18", "primary-container": "#2f7d4f", "tertiary": "#854600", "on-primary-container": "#ceffd9", "surface-container-highest": "#d9e6dc", "primary-fixed": "#a4f4bc", "on-error-container": "#93000a", "on-tertiary-fixed-variant": "#6e3900", "on-surface": "#131e18", "on-error": "#ffffff", "inverse-surface": "#28332d", "tertiary-fixed-dim": "#ffb77d", "on-tertiary": "#ffffff", "on-surface-variant": "#3f4941", "background": "#f0fdf3", "surface-container-high": "#dfebe2", "error": "#ba1a1a", "surface": "#f0fdf3", "surface-dim": "#d0ddd4", "primary-fixed-dim": "#89d7a1", "primary": "#0d6438", "inverse-on-surface": "#e7f4ea", "on-secondary-container": "#4a695e", "on-primary-fixed-variant": "#00522c", "on-secondary-fixed-variant": "#2e4d43", "secondary-container": "#c5e7da", "outline": "#707a70", "on-tertiary-fixed": "#2f1500", "tertiary-container": "#a65c0d" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.5rem", "space-md": "1rem", "space-xl": "2rem", "margin-mobile": "1rem", "gutter-mobile": "1rem", "space-xs": "0.5rem", "gutter": "1.5rem", "margin": "2rem", "space-sm": "0.75rem" }, "fontFamily": { "headline-xl-mobile": ["Epilogue"], "label-md": ["Inter"], "label-lg": ["Inter"], "headline-lg": ["Epilogue"], "body-sm": ["Inter"], "headline-sm": ["Epilogue"], "headline-xl": ["Epilogue"], "label-sm": ["Inter"], "headline-md": ["Epilogue"], "headline-lg-mobile": ["Epilogue"], "body-md": ["Inter"], "body-lg": ["Inter"] }, "fontSize": { "headline-xl-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "500" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }] } } } };</script></head><body class="bg-[#FAF8F3] text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col"><header class="fixed top-0 left-0 right-0 z-50 bg-[#FAF8F3]/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(20,51,42,0.04)]"><div class="h-20 max-w-7xl mx-auto px-space-md lg:px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg flex-shrink-0"><a class="flex items-center gap-3 group" data-path="landing" href="#"><img alt="FoodShare Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Wn24S97Z_pJAXLgaY1ZIHDdJNPdHRj7nIU3hSrZ76HWEX6on8Oc3OKuQP71K2tdArc6T_mrDJ__RUi2wmYJ8RxmtIQ7xjKW0hQmL_-XLjs2BTEFsK3hilOBB40tW1qIX--aqOQXHDo8lfv9jjJXU8sXuI2aMmgp4DCKBCDOEoCTaquxufZ55HPyBIqr1uufsrKGAvXCuCKwfZqyokfaGTBz2BBeQ6L4f8Ug4RHvVte0BBdWpJZX2yho6bF"/><span class="font-headline-sm text-headline-sm text-primary tracking-tight">FoodShare</span></a><div class="hidden xl:flex items-center gap-2 px-space-sm py-1 rounded-full bg-surface-container-low shadow-[0_1px_4px_rgba(20,51,42,0.04)]"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span></span><span class="font-label-sm text-label-sm text-secondary font-medium">Live 12 rescued today</span></div></div><nav class="hidden lg:flex items-center gap-1.5 p-1 rounded-full bg-surface-container-low" data-active-classes="bg-primary-container text-on-primary font-medium shadow-[0_2px_10px_rgba(20,51,42,0.08)]"><a class="px-space-md py-2 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="landing" href="#">Home</a><a class="px-space-md py-2 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="nearby-feed" href="#">Nearby Feed</a><a class="px-space-md py-2 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="listing-detail" href="#">Listing Detail</a><a class="px-space-md py-2 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="post-surplus" href="#">Post Surplus</a><a class="px-space-md py-2 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="impact-dashboard" href="#">Impact Dashboard</a></nav><div class="flex items-center gap-space-sm sm:gap-space-md flex-shrink-0"><div class="hidden sm:flex items-center p-1 rounded-full bg-surface-container-low"><button class="px-3 py-1.5 rounded-full font-label-sm text-label-sm bg-primary text-on-primary shadow-[0_1px_4px_rgba(20,51,42,0.06)] transition-all" type="button">Receiver</button><button class="px-3 py-1.5 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" type="button">Donor</button><button class="px-3 py-1.5 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" type="button">Volunteer</button></div><button aria-label="Notifications" class="relative p-2 rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 flex h-4 min-w-[16px] px-1 items-center justify-center rounded-full bg-tertiary-container text-on-primary font-label-sm text-[10px] font-semibold leading-none">3</span></button><div class="flex items-center gap-2.5 pl-2 sm:pl-3"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBYzu0T8w9_lto0EWsnfHzRRNim1vYIcwBUs3Nv6UsA1GouxgNkbyjTYth9eNl32yhfbrulKAy5Vr12uQ7dnREzHAPDaWiJ0hRWVzloIFpf7nNgSEE2FXYCtLgdPCXGbXlJY7ci8-iPl1Vwdhp0VRh0LUI0ar0Uxu3tEA1_gPZNk2u8cRVNQZ_Ci2vrTDvvsw_aq5m3qhaoKZPc3waNeQi8SbNljtifKWAPKvEDaBvXZUU1itxDDFYyQ"/><div class="hidden md:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-medium leading-none">Maya Lin</span><span class="font-label-sm text-label-sm text-on-surface-variant text-[11px] mt-0.5">Neighborhood Pioneer</span></div></div></div></div></header><main class="w-full pt-20 flex-1 bg-[#FAF8F3]"><div class="flex flex-col w-full">
+<div class="relative w-full overflow-hidden pb-space-xl">
+<!-- Ambient organic backdrop elements -->
+<div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-primary-fixed/30 blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/3 -right-24 w-80 h-80 rounded-full bg-secondary-fixed/40 blur-3xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-space-md lg:px-margin pt-space-lg">
+<!-- Breadcrumb / Overline -->
+<div class="flex items-center gap-2 mb-space-sm text-secondary">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Community Onboarding</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Step 1 of 2: Role &amp; Identity</span>
+</div>
+<!-- Headline & Introduction -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-xl">
+<div class="max-w-2xl">
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">
+            Join the neighborhood circle of wholesome nourishment.
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-2">
+            Choose how you wish to participate today. You can post surplus, pick up rescued meals, or volunteer routes anytime from one unified pass.
+          </p>
+</div>
+<!-- Social Proof Micro Badge -->
+<div class="inline-flex items-center gap-3 p-3 rounded-2xl bg-surface-container-lowest shadow-sm self-start md:self-auto">
+<div class="flex -space-x-2 overflow-hidden">
+<img class="inline-block h-8 w-8 rounded-full object-cover ring-2 ring-surface-container-lowest" data-alt="Close-up portrait of a cheerful female baker with warm apron in an artisan bakery workshop in San Francisco, soft natural morning sunlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_XHBfmiRZiehBqXmiuLi085LebPDUrMKkN2ewjZ533Gn_LXLekSivFepVWmvdP3Zq_ZKkfpYoyAXj7OmGD5q1V0FSNY0OK2CzuwDmxn3aDoSC9CxE11yW5Zum7MQWxHxuCVEpSB3x-xHQ3dRrcNIGNsJH_4LXV8LPzewZ8yxUjV14819LzDe6faCbmNpbsR1-3dEfwfH6_7mcgHU1Lk3HC59yj6DaIYxEAtnKqNLlmeH_wmPo16IYSA"/>
+<img class="inline-block h-8 w-8 rounded-full object-cover ring-2 ring-surface-container-lowest" data-alt="Portrait of a young male volunteer courier holding a canvas insulated food bag outdoors in an urban green community garden, joyful candid expression." src="https://lh3.googleusercontent.com/aida-public/AB6AXuADOdvcU8ItYQGLqSWwmNbiRWBi16UOCRSSk9NqqPTp6JLL5wgWVG-qCULeLzETSi-Xd9h4MUXeeWW8B7MOz4G_7IbRG2K1Xne5Ol0gvHdEs3RIfCyhS8wo_sI9vqZ16BMAGqPtgu3VDsfX9PlODWaKjVW07IrVywQWJ1xcUDQfL51Ck_Ty9vgLv1FKUmK7czp2IIk51uq4G1YkpPJw7QZOypm90kVoK6UvdhUBCdLRgZCmtP-177EwZw"/>
+<img class="inline-block h-8 w-8 rounded-full object-cover ring-2 ring-surface-container-lowest" data-alt="Portrait of a friendly non-profit food pantry coordinator smiling warmly with boxes of fresh organic produce in a community hall." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDicJ0oJX5SriugTCFe9ZMYef76ttDwubIDfK6hGmpx3cW2gUTyzlQiU2xhqgicOwJDDA4gXBJpGAdQab-jmtSF2YfmCBpZjnlf1-F69wT1yynIZe10c4BPmxNtxJQVdilFikh0DSzPWCArlvY-6NQSlEt7x_xb5QZsz5EICDABt5dPmwXO3hDzDLCxcEDaaWsheDnIdxrKBq7Oq1RphBqN5TMiw7Jmw4MuPOiFRhXmGo4gDmfqmGimqg"/>
+</div>
+<div class="text-left pr-2">
+<p class="font-label-sm text-label-sm text-on-surface font-semibold leading-tight">1,240+ Food Heroes</p>
+<p class="font-label-sm text-label-sm text-secondary leading-tight">Active in your metro area</p>
+</div>
+</div>
+</div>
+<!-- Stage 1: Role Picker (Interactive Cards) -->
+<div class="mb-space-xl">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="flex items-center justify-center w-6 h-6 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-semibold">1</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Select your primary role</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant hidden sm:inline-block">You can seamlessly toggle or add more roles later</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md" id="role-picker">
+<!-- Card 1: Food Donor -->
+<div class="role-card cursor-pointer relative flex flex-col justify-between p-6 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all duration-200" data-role="donor" onclick="selectRole('donor')">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[26px]">storefront</span>
+</div>
+<div class="role-radio flex items-center justify-center w-6 h-6 rounded-full bg-surface-container text-transparent transition-colors">
+<span class="material-symbols-outlined text-sm font-bold">check</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">Food Donor</h3>
+<p class="font-body-sm text-body-sm text-secondary font-medium mb-4">Restaurants, bakeries, grocers, caterers &amp; urban farms</p>
+<ul class="flex flex-col gap-2.5">
+<li class="flex items-start gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">bolt</span>
+<span>Post surplus batches in 2 minutes with scheduled pickups</span>
+</li>
+<li class="flex items-start gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">receipt_long</span>
+<span>Automated Good Samaritan compliant tax deduction receipts</span>
+</li>
+<li class="flex items-start gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">verified</span>
+<span>Verified Zero-Waste storefront &amp; ESG quarterly badges</span>
+</li>
+</ul>
+</div>
+<div class="mt-6 pt-4 flex items-center justify-between bg-surface-container-low px-3 py-2 rounded-xl">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Typical response time</span>
+<span class="font-label-sm text-label-sm font-semibold text-primary">under 18 mins</span>
+</div>
+</div>
+<!-- Card 2: Receiver & Shelter (Selected by default) -->
+<div class="role-card cursor-pointer relative flex flex-col justify-between p-6 rounded-2xl bg-surface-container-lowest shadow-md transition-all duration-200" data-role="receiver" onclick="selectRole('receiver')">
+<!-- Active indicator ribbon / highlight background -->
+<div class="absolute inset-0 rounded-2xl bg-primary/5 pointer-events-none active-tint"></div>
+<div class="relative z-10">
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[26px]">volunteer_activism</span>
+</div>
+<div class="role-radio flex items-center justify-center w-6 h-6 rounded-full bg-primary text-on-primary shadow-sm transition-colors">
+<span class="material-symbols-outlined text-sm font-bold">check</span>
+</div>
+</div>
+<div class="flex items-center gap-2 mb-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Receiver &amp; Shelter</h3>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[10px] font-semibold">Recommended</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary font-medium mb-4">Community pantries, mutual aids, shelters &amp; households</p>
+<ul class="flex flex-col gap-2.5">
+<li class="flex items-start gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">eco</span>
+<span>100% free wholesome, prepared &amp; raw organic foods</span>
+</li>
+<li class="flex items-start gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">notifications_active</span>
+<span>Instant geo-alerts when fresh trays drop within 2 miles</span>
+</li>
+<li class="flex items-start gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">nutrition</span>
+<span>Allergen profiles, Halal, Kosher &amp; Vegan smart filters</span>
+</li>
+</ul>
+</div>
+<div class="relative z-10 mt-6 pt-4 flex items-center justify-between bg-surface-container-low px-3 py-2 rounded-xl">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Zero subscription fees</span>
+<span class="font-label-sm text-label-sm font-semibold text-primary">Always Free</span>
+</div>
+</div>
+<!-- Card 3: Volunteer Courier -->
+<div class="role-card cursor-pointer relative flex flex-col justify-between p-6 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all duration-200" data-role="volunteer" onclick="selectRole('volunteer')">
+<div>
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[26px]">directions_bike</span>
+</div>
+<div class="role-radio flex items-center justify-center w-6 h-6 rounded-full bg-surface-container text-transparent transition-colors">
+<span class="material-symbols-outlined text-sm font-bold">check</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">Volunteer Courier</h3>
+<p class="font-body-sm text-body-sm text-secondary font-medium mb-4">Cyclists, walkers, transit commuters &amp; EV drivers</p>
+<ul class="flex flex-col gap-2.5">
+<li class="flex items-start gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">timer</span>
+<span>Micro-rescues in 15–25 mins fitting your daily route</span>
+</li>
+<li class="flex items-start gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">map</span>
+<span>Hands-free turn-by-turn navigation &amp; contact-free handoffs</span>
+</li>
+<li class="flex items-start gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">co2</span>
+<span>Verified personal CO2 offset &amp; community karma score</span>
+</li>
+</ul>
+</div>
+<div class="mt-6 pt-4 flex items-center justify-between bg-surface-container-low px-3 py-2 rounded-xl">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Commitment</span>
+<span class="font-label-sm text-label-sm font-semibold text-primary">On-Demand / Flexible</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Stage 2: Registration & Form Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Main Form Panel (Left 8 cols) -->
+<div class="lg:col-span-8 bg-surface-container-lowest rounded-3xl p-6 sm:p-8 md:p-10 shadow-sm relative overflow-hidden">
+<!-- Form Header & Mode Toggle -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-6 gap-4">
+<div>
+<div class="flex items-center gap-2">
+<span class="flex items-center justify-center w-6 h-6 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-semibold">2</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Account Credentials &amp; Verification</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1" id="role-subtitle-msg">
+                Registering as a verified <strong class="text-primary font-semibold">Receiver &amp; Shelter Partner</strong>.
+              </p>
+</div>
+<!-- Tab Switch: Sign Up vs Log In -->
+<div class="flex items-center p-1 rounded-full bg-surface-container-low self-start sm:self-auto shrink-0">
+<button class="px-4 py-1.5 rounded-full font-label-sm text-label-sm bg-primary text-on-primary shadow-sm font-semibold transition-all" type="button">Sign Up</button>
+<button class="px-4 py-1.5 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-all" type="button">Log In</button>
+</div>
+</div>
+<!-- Fast Social Single Sign-on -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+<button class="flex items-center justify-center gap-3 px-4 py-3 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface font-label-lg text-label-lg transition-colors" type="button">
+<svg class="w-5 h-5" viewbox="0 0 24 24">
+<path d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.17z" fill="#4285F4"></path>
+<path d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z" fill="#34A853"></path>
+<path d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.16 0 9.94 0 12s.45 3.84 1.25 5.42l4.03-3.15z" fill="#FBBC05"></path>
+<path d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z" fill="#EA4335"></path>
+</svg>
+<span>Continue with Google</span>
+</button>
+<button class="flex items-center justify-center gap-3 px-4 py-3 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface font-label-lg text-label-lg transition-colors" type="button">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24">
+<path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.75 1.04-1.8 0.93-2.85-.9.04-1.99.6-2.63 1.35-.56.65-.97 1.7-.84 2.73.99.08 2-.51 2.54-1.23z"></path>
+</svg>
+<span>Continue with Apple</span>
+</button>
+</div>
+<!-- Divider -->
+<div class="relative flex items-center justify-center mb-6">
+<div class="w-full h-px bg-surface-container-high"></div>
+<span class="absolute px-4 bg-surface-container-lowest font-label-sm text-label-sm text-on-surface-variant">or sign up with email</span>
+</div>
+<!-- Adaptive Form Elements -->
+<form class="flex flex-col gap-5" onsubmit="event.preventDefault(); showSuccessFeedback();">
+<!-- Two Column Row 1 -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-semibold mb-1.5">
+                  Full Name / Contact Lead <span class="text-error">*</span>
+</label>
+<div class="relative">
+<input class="w-full h-12 px-4 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md placeholder-on-surface-variant/50 focus:outline-none focus:ring-2 focus:ring-primary transition-all" placeholder="Elena Vance" required="" type="text"/>
+<span class="material-symbols-outlined absolute right-3.5 top-3 text-secondary text-xl">person</span>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-semibold mb-1.5 flex items-center justify-between">
+<span id="org-label">Organization / Pantry Name</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-normal" id="org-helper">If registering as entity</span>
+</label>
+<div class="relative">
+<input class="w-full h-12 px-4 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md placeholder-on-surface-variant/50 focus:outline-none focus:ring-2 focus:ring-primary transition-all" id="org-input" placeholder="e.g. Southside Community Pantry" type="text"/>
+<span class="material-symbols-outlined absolute right-3.5 top-3 text-secondary text-xl" id="org-icon">apartment</span>
+</div>
+</div>
+</div>
+<!-- Two Column Row 2 -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-semibold mb-1.5">
+                  Email Address <span class="text-error">*</span>
+</label>
+<div class="relative">
+<input class="w-full h-12 px-4 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md placeholder-on-surface-variant/50 focus:outline-none focus:ring-2 focus:ring-primary transition-all" placeholder="elena@southsidepantry.org" required="" type="email"/>
+<span class="material-symbols-outlined absolute right-3.5 top-3 text-secondary text-xl">mail</span>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-semibold mb-1.5">
+                  Phone (for SMS Dispatch Alerts) <span class="text-error">*</span>
+</label>
+<div class="relative">
+<input class="w-full h-12 px-4 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md placeholder-on-surface-variant/50 focus:outline-none focus:ring-2 focus:ring-primary transition-all" placeholder="(415) 555-0192" required="" type="tel"/>
+<span class="material-symbols-outlined absolute right-3.5 top-3 text-secondary text-xl">phone_iphone</span>
+</div>
+</div>
+</div>
+<!-- Two Column Row 3: Postal & Password -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<div class="flex items-center justify-between mb-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold">
+                    Neighborhood or Postal Code <span class="text-error">*</span>
+</label>
+<button class="text-primary hover:underline font-label-sm text-label-sm flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-xs">my_location</span> Auto-detect
+                  </button>
+</div>
+<div class="relative">
+<input class="w-full h-12 px-4 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md placeholder-on-surface-variant/50 focus:outline-none focus:ring-2 focus:ring-primary transition-all" placeholder="Mission District, 94110" required="" type="text"/>
+<span class="material-symbols-outlined absolute right-3.5 top-3 text-secondary text-xl">distance</span>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface font-semibold mb-1.5">
+                  Security Password <span class="text-error">*</span>
+</label>
+<div class="relative">
+<input class="w-full h-12 px-4 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md placeholder-on-surface-variant/50 focus:outline-none focus:ring-2 focus:ring-primary transition-all" id="password-field" placeholder="••••••••••••" required="" type="password"/>
+<button class="absolute right-3.5 top-3 text-secondary text-xl hover:text-on-surface" onclick="togglePasswordVisibility()" type="button">
+<span class="material-symbols-outlined" id="pw-visibility-icon">visibility</span>
+</button>
+</div>
+<!-- Strength Meter Micro Component -->
+<div class="flex items-center gap-1.5 mt-2">
+<div class="h-1 flex-1 rounded-full bg-primary"></div>
+<div class="h-1 flex-1 rounded-full bg-primary"></div>
+<div class="h-1 flex-1 rounded-full bg-primary"></div>
+<div class="h-1 flex-1 rounded-full bg-surface-container-high"></div>
+<span class="font-label-sm text-label-sm text-primary font-medium pl-1">Strong</span>
+</div>
+</div>
+</div>
+<!-- Role-Specific Dynamic Field (Shelter capacity or Donor type) -->
+<div class="p-4 rounded-2xl bg-surface-container-low flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3" id="dynamic-role-field">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-2xl">kitchen</span>
+<div>
+<h4 class="font-label-lg text-label-lg font-semibold text-on-surface">Cold Storage &amp; Food Handler Certificate</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Do you have on-site refrigeration ready for chilled rescued parcels?</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<label class="inline-flex items-center gap-1.5 text-on-surface font-label-sm text-label-sm">
+<input checked="" class="text-primary accent-primary" name="storage" type="radio"/> Yes
+                </label>
+<label class="inline-flex items-center gap-1.5 text-on-surface font-label-sm text-label-sm ml-2">
+<input class="text-primary accent-primary" name="storage" type="radio"/> Ambient only
+                </label>
+</div>
+</div>
+<!-- Verification & Compliance Checks -->
+<div class="flex flex-col gap-3 pt-2">
+<label class="flex items-start gap-3 cursor-pointer group">
+<input checked="" class="mt-1 h-4 w-4 rounded accent-primary text-primary cursor-pointer shrink-0" required="" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant group-hover:text-on-surface leading-snug">
+                  I commit to adhering to the <a class="text-primary underline font-medium" href="#">Good Samaritan Food Donation Safe Handling Standards</a> and confirm all distributed rations comply with hygiene benchmarks.
+                </span>
+</label>
+<label class="flex items-start gap-3 cursor-pointer group">
+<input checked="" class="mt-1 h-4 w-4 rounded accent-primary text-primary cursor-pointer shrink-0" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant group-hover:text-on-surface leading-snug">
+                  Send real-time pickup &amp; high-urgency rescue dispatch alerts via SMS and push notifications for items within 3 miles.
+                </span>
+</label>
+</div>
+<!-- Submit Action CTA -->
+<div class="pt-4 flex flex-col sm:flex-row items-center gap-4">
+<button class="w-full sm:w-auto px-8 py-4 rounded-full bg-primary-container text-on-primary hover:bg-primary font-headline-sm text-headline-sm shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2" id="submit-btn" type="submit">
+<span>Create Free FoodShare Account</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<div class="flex items-center gap-1.5 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm">lock</span>
+<span>256-bit encrypted &amp; private</span>
+</div>
+</div>
+</form>
+<!-- Toast Notification Simulator -->
+<div class="hidden absolute bottom-6 right-6 left-6 p-4 rounded-2xl bg-inverse-surface text-inverse-on-surface shadow-xl flex items-center justify-between" id="signup-toast">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-fixed text-2xl">check_circle</span>
+<div>
+<p class="font-label-lg text-label-lg font-semibold">Account created successfully!</p>
+<p class="font-label-sm text-label-sm text-surface-container-high">Verification link dispatched to your email address.</p>
+</div>
+</div>
+<button class="text-surface-variant hover:text-on-primary" onclick="document.getElementById('signup-toast').classList.add('hidden')">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+</div>
+<!-- Trust & Reassurance Sidebar (Right 4 cols) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Community Quote & Donor Spotlight Card -->
+<div class="rounded-3xl bg-surface-container-lowest p-6 shadow-sm flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Warm portrait of chef Marcus Chen standing proudly in a clean modern kitchen with stainless steel counter and fresh produce, warm ambient lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5hqBWSJ64kyVjaDHxfnI2vInox6xIbx5MiNpIXBiBWKBeYP_vGw7cNMlQS3OwG92SQHeK3oznDiD1pFcgNG4nVuE4sFwHGwMXPYubxHot43GusudBH-IVKz8cWxirDGIJatkl9og4KLRKtyNk1XgNLfpZ93FF6eXhI2mh3gIBPVx2IhqM_HV5DOx9O1s-pz2YvJQ7Yg_E2VGhmHl0Cl55bEHZlL0YyfCkHlFOm523XOD2QypdpcO-ew"/>
+<div>
+<h4 class="font-label-lg text-label-lg font-semibold text-on-surface">Marcus Chen</h4>
+<p class="font-label-sm text-label-sm text-secondary">Head Chef, Hearth &amp; Harvest Kitchen</p>
+</div>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined text-4xl text-primary/10 absolute -top-3 -left-2 select-none">format_quote</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic relative z-10 pl-3">
+                “Before FoodShare, closing nights were fraught with having to throw out 20 delicious artisan sourdough loaves and unsold stews. Now, local shelter couriers pick up everything in under twenty minutes.”
+              </p>
+</div>
+<div class="flex items-center justify-between pt-3 text-secondary font-label-sm text-label-sm bg-surface-container-low p-3 rounded-xl">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-base">eco</span>
+<span>3.8 tons rescued</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-base">grade</span>
+<span>5.0 donor rating</span>
+</div>
+</div>
+</div>
+<!-- Live Impact Micro-Gauge (Inline SVG Chart) -->
+<div class="rounded-3xl bg-surface-container-lowest p-6 shadow-sm flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<h4 class="font-label-lg text-label-lg font-semibold text-on-surface">Neighborhood Recovery Pulse</h4>
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+</div>
+<!-- Mini Progress / Gauge Visual -->
+<div class="flex items-center gap-4">
+<div class="relative w-16 h-16 shrink-0 flex items-center justify-center">
+<svg class="w-16 h-16 transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-primary-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="82, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="absolute font-headline-sm text-headline-sm text-on-surface">82%</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Daily Rescue Goal</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">1,640 of 2,000 lbs matched before sunset</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">
+              Joining today directly routes excess baked goods, prepared entrees, and farm harvests to nearby doorsteps.
+            </p>
+</div>
+<!-- Trust Guarantees & Credentials -->
+<div class="rounded-3xl bg-surface-container-lowest p-6 shadow-sm flex flex-col gap-3">
+<h4 class="font-label-lg text-label-lg font-semibold text-on-surface mb-1">Our Safety &amp; Trust Pact</h4>
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-lg">verified_user</span>
+</div>
+<div>
+<p class="font-label-md text-label-md font-medium text-on-surface">Good Samaritan Protection</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Donors are legally protected under US Public Law 104-210.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-lg">medical_services</span>
+</div>
+<div>
+<p class="font-label-md text-label-md font-medium text-on-surface">Safe Temperature Logging</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Thermal handoffs tracked and logged digitally at pickup.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-lg">volunteer_activism</span>
+</div>
+<div>
+<p class="font-label-md text-label-md font-medium text-on-surface">100% Free Forever</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Non-profit recipients &amp; local families never pay a penny.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+    function selectRole(role) {
+      const cards = document.querySelectorAll('.role-card');
+      const orgLabel = document.getElementById('org-label');
+      const orgHelper = document.getElementById('org-helper');
+      const orgInput = document.getElementById('org-input');
+      const orgIcon = document.getElementById('org-icon');
+      const subtitleMsg = document.getElementById('role-subtitle-msg');
+      const dynamicField = document.getElementById('dynamic-role-field');
+      const submitBtn = document.getElementById('submit-btn');
+
+      cards.forEach(card => {
+        const isCurrent = card.dataset.role === role;
+        const radio = card.querySelector('.role-radio');
+        const tint = card.querySelector('.active-tint');
+
+        if (isCurrent) {
+          card.classList.remove('shadow-sm');
+          card.classList.add('shadow-md');
+          radio.classList.remove('bg-surface-container', 'text-transparent');
+          radio.classList.add('bg-primary', 'text-on-primary');
+          
+          if (!tint) {
+            const newTint = document.createElement('div');
+            newTint.className = 'absolute inset-0 rounded-2xl bg-primary/5 pointer-events-none active-tint';
+            card.prepend(newTint);
+          }
+        } else {
+          card.classList.remove('shadow-md');
+          card.classList.add('shadow-sm');
+          radio.classList.add('bg-surface-container', 'text-transparent');
+          radio.classList.remove('bg-primary', 'text-on-primary');
+          if (tint) {
+            tint.remove();
+          }
+        }
+      });
+
+      if (role === 'donor') {
+        orgLabel.textContent = 'Business or Storefront Name';
+        orgHelper.textContent = 'Required for verification';
+        orgInput.placeholder = 'e.g., Tartine Bakery or Daily Greens Market';
+        orgIcon.textContent = 'storefront';
+        subtitleMsg.innerHTML = 'Registering as a certified <strong class="text-primary font-semibold">Food Donor Partner</strong>.';
+        dynamicField.innerHTML = `
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-primary text-2xl">schedule</span>
+            <div>
+              <h4 class="font-label-lg text-label-lg font-semibold text-on-surface">Surplus Cadence Preference</h4>
+              <p class="font-label-sm text-label-sm text-on-surface-variant">When do you typically produce edible surplus trays?</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <label class="inline-flex items-center gap-1.5 text-on-surface font-label-sm text-label-sm">
+              <input type="radio" name="timing" checked class="text-primary accent-primary" /> Daily Closing
+            </label>
+            <label class="inline-flex items-center gap-1.5 text-on-surface font-label-sm text-label-sm ml-2">
+              <input type="radio" name="timing" class="text-primary accent-primary" /> Sporadic
+            </label>
+          </div>
+        `;
+        submitBtn.querySelector('span:first-child').textContent = 'Create Food Donor Account';
+      } else if (role === 'receiver') {
+        orgLabel.textContent = 'Organization / Pantry Name';
+        orgHelper.textContent = 'If registering as entity';
+        orgInput.placeholder = 'e.g. Southside Community Pantry';
+        orgIcon.textContent = 'apartment';
+        subtitleMsg.innerHTML = 'Registering as a verified <strong class="text-primary font-semibold">Receiver &amp; Shelter Partner</strong>.';
+        dynamicField.innerHTML = `
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-primary text-2xl">kitchen</span>
+            <div>
+              <h4 class="font-label-lg text-label-lg font-semibold text-on-surface">Cold Storage &amp; Food Handler Certificate</h4>
+              <p class="font-label-sm text-label-sm text-on-surface-variant">Do you have on-site refrigeration ready for chilled rescued parcels?</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <label class="inline-flex items-center gap-1.5 text-on-surface font-label-sm text-label-sm">
+              <input type="radio" name="storage" checked class="text-primary accent-primary" /> Yes
+            </label>
+            <label class="inline-flex items-center gap-1.5 text-on-surface font-label-sm text-label-sm ml-2">
+              <input type="radio" name="storage" class="text-primary accent-primary" /> Ambient only
+            </label>
+          </div>
+        `;
+        submitBtn.querySelector('span:first-child').textContent = 'Create Free FoodShare Account';
+      } else if (role === 'volunteer') {
+        orgLabel.textContent = 'Primary Transit Mode';
+        orgHelper.textContent = 'For route matching';
+        orgInput.placeholder = 'e.g. Cargo Bicycle, EV, Walking';
+        orgIcon.textContent = 'directions_bike';
+        subtitleMsg.innerHTML = 'Registering as an on-call <strong class="text-primary font-semibold">Volunteer Courier</strong>.';
+        dynamicField.innerHTML = `
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-primary text-2xl">backpack</span>
+            <div>
+              <h4 class="font-label-lg text-label-lg font-semibold text-on-surface">Equipment &amp; Carrier Kit</h4>
+              <p class="font-label-sm text-label-sm text-on-surface-variant">Do you own an insulated food delivery backpack or cooler?</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <label class="inline-flex items-center gap-1.5 text-on-surface font-label-sm text-label-sm">
+              <input type="radio" name="equipment" checked class="text-primary accent-primary" /> Yes, have bag
+            </label>
+            <label class="inline-flex items-center gap-1.5 text-on-surface font-label-sm text-label-sm ml-2">
+              <input type="radio" name="equipment" class="text-primary accent-primary" /> Request kit
+            </label>
+          </div>
+        `;
+        submitBtn.querySelector('span:first-child').textContent = 'Join Rescue Volunteer Squad';
+      }
+    }
+
+    function togglePasswordVisibility() {
+      const field = document.getElementById('password-field');
+      const icon = document.getElementById('pw-visibility-icon');
+      if (field.type === 'password') {
+        field.type = 'text';
+        icon.textContent = 'visibility_off';
+      } else {
+        field.type = 'password';
+        icon.textContent = 'visibility';
+      }
+    }
+
+    function showSuccessFeedback() {
+      const toast = document.getElementById('signup-toast');
+      toast.classList.remove('hidden');
+      setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 5000);
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-low mt-auto"><div class="max-w-7xl mx-auto px-space-md lg:px-margin py-space-xl"><div class="grid grid-cols-1 md:grid-cols-12 gap-space-lg pb-space-lg"><div class="md:col-span-5 flex flex-col gap-space-sm"><div class="flex items-center gap-2"><img alt="FoodShare Logo" class="h-6 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Wn24S97Z_pJAXLgaY1ZIHDdJNPdHRj7nIU3hSrZ76HWEX6on8Oc3OKuQP71K2tdArc6T_mrDJ__RUi2wmYJ8RxmtIQ7xjKW0hQmL_-XLjs2BTEFsK3hilOBB40tW1qIX--aqOQXHDo8lfv9jjJXU8sXuI2aMmgp4DCKBCDOEoCTaquxufZ55HPyBIqr1uufsrKGAvXCuCKwfZqyokfaGTBz2BBeQ6L4f8Ug4RHvVte0BBdWpJZX2yho6bF"/><span class="font-headline-sm text-headline-sm text-primary">FoodShare</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Connecting local neighborhood surpluses, community kitchens, and mindful households to eliminate edible food waste and promote accessible nutrition.</p><div class="flex items-center gap-space-md pt-2"><div class="flex items-center gap-1.5 font-label-sm text-label-sm text-secondary"><span class="material-symbols-outlined text-base text-primary">eco</span><span>48.2k kg CO2 avoided</span></div><div class="flex items-center gap-1.5 font-label-sm text-label-sm text-secondary"><span class="material-symbols-outlined text-base text-primary">volunteer_activism</span><span>19,410 meals shared</span></div></div></div><div class="md:col-span-2 sm:col-span-4 flex flex-col gap-2"><h4 class="font-label-lg text-label-lg text-on-surface font-semibold mb-1">Rescue Network</h4><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="landing" href="#">Home Overview</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="nearby-feed" href="#">Neighborhood Feed</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="post-surplus" href="#">Donate Food</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Pantry Partners</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Volunteer Couriers</a></div><div class="md:col-span-2 sm:col-span-4 flex flex-col gap-2"><h4 class="font-label-lg text-label-lg text-on-surface font-semibold mb-1">Nutrition &amp; Trust</h4><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Food Safety Protocols</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Dietary Guidelines</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="impact-dashboard" href="#">Open Impact Data</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Community Guidelines</a></div><div class="md:col-span-3 sm:col-span-4 flex flex-col gap-2"><h4 class="font-label-lg text-label-lg text-on-surface font-semibold mb-1">Open Platform</h4><p class="font-body-sm text-body-sm text-on-surface-variant">Built on open data standards and volunteer community governance. Free forever for local recipients.</p><div class="flex items-center gap-2 pt-2"><span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-highest font-label-sm text-label-sm text-on-surface-variant"><span class="material-symbols-outlined text-xs">verified_user</span>Safe Handling Verified</span></div></div></div><div class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-4 font-label-sm text-label-sm text-on-surface-variant"><p>© 2025 FoodShare Community Collective. All rights reserved.</p><div class="flex items-center gap-space-lg"><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a><a class="hover:text-primary transition-colors" href="#">Terms of Service</a><a class="hover:text-primary transition-colors" href="#">Transparency Registry</a></div></div></div></footer></body></html>

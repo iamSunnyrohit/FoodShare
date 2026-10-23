@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>FoodShare - Community Food Rescue &amp; Sharing</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-lowest": "#ffffff", "secondary-fixed": "#c8eadc", "surface-container-low": "#eaf7ed", "surface-bright": "#f0fdf3", "inverse-primary": "#89d7a1", "secondary-fixed-dim": "#accec1", "error-container": "#ffdad6", "secondary": "#46655a", "on-primary": "#ffffff", "on-tertiary-container": "#fff0e7", "tertiary-fixed": "#ffdcc3", "surface-variant": "#d9e6dc", "surface-container": "#e4f1e7", "on-primary-fixed": "#00210e", "surface-tint": "#1a6c40", "on-secondary": "#ffffff", "outline-variant": "#bfc9be", "on-secondary-fixed": "#012018", "on-background": "#131e18", "primary-container": "#2f7d4f", "tertiary": "#854600", "on-primary-container": "#ceffd9", "surface-container-highest": "#d9e6dc", "primary-fixed": "#a4f4bc", "on-error-container": "#93000a", "on-tertiary-fixed-variant": "#6e3900", "on-surface": "#131e18", "on-error": "#ffffff", "inverse-surface": "#28332d", "tertiary-fixed-dim": "#ffb77d", "on-tertiary": "#ffffff", "on-surface-variant": "#3f4941", "background": "#f0fdf3", "surface-container-high": "#dfebe2", "error": "#ba1a1a", "surface": "#f0fdf3", "surface-dim": "#d0ddd4", "primary-fixed-dim": "#89d7a1", "primary": "#0d6438", "inverse-on-surface": "#e7f4ea", "on-secondary-container": "#4a695e", "on-primary-fixed-variant": "#00522c", "on-secondary-fixed-variant": "#2e4d43", "secondary-container": "#c5e7da", "outline": "#707a70", "on-tertiary-fixed": "#2f1500", "tertiary-container": "#a65c0d" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.5rem", "space-md": "1rem", "space-xl": "2rem", "margin-mobile": "1rem", "gutter-mobile": "1rem", "space-xs": "0.5rem", "gutter": "1.5rem", "margin": "2rem", "space-sm": "0.75rem" }, "fontFamily": { "headline-xl-mobile": ["Epilogue"], "label-md": ["Inter"], "label-lg": ["Inter"], "headline-lg": ["Epilogue"], "body-sm": ["Inter"], "headline-sm": ["Epilogue"], "headline-xl": ["Epilogue"], "label-sm": ["Inter"], "headline-md": ["Epilogue"], "headline-lg-mobile": ["Epilogue"], "body-md": ["Inter"], "body-lg": ["Inter"] }, "fontSize": { "headline-xl-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "500" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }] } } } };</script></head><body class="bg-[#FAF8F3] text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col"><header class="fixed top-0 left-0 right-0 z-50 bg-[#FAF8F3]/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(20,51,42,0.04)]"><div class="h-20 max-w-7xl mx-auto px-space-md lg:px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg flex-shrink-0"><a class="flex items-center gap-3 group" data-path="nearby-feed" href="#"><img alt="FoodShare Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Wn24S97Z_pJAXLgaY1ZIHDdJNPdHRj7nIU3hSrZ76HWEX6on8Oc3OKuQP71K2tdArc6T_mrDJ__RUi2wmYJ8RxmtIQ7xjKW0hQmL_-XLjs2BTEFsK3hilOBB40tW1qIX--aqOQXHDo8lfv9jjJXU8sXuI2aMmgp4DCKBCDOEoCTaquxufZ55HPyBIqr1uufsrKGAvXCuCKwfZqyokfaGTBz2BBeQ6L4f8Ug4RHvVte0BBdWpJZX2yho6bF"/><span class="font-headline-sm text-headline-sm text-primary tracking-tight">FoodShare</span></a><div class="hidden xl:flex items-center gap-2 px-space-sm py-1 rounded-full bg-surface-container-low shadow-[0_1px_4px_rgba(20,51,42,0.04)]"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span></span><span class="font-label-sm text-label-sm text-secondary font-medium">Live 12 rescued today</span></div></div><nav class="hidden lg:flex items-center gap-1.5 p-1 rounded-full bg-surface-container-low" data-active-classes="bg-primary-container text-on-primary font-medium shadow-[0_2px_10px_rgba(20,51,42,0.08)]"><a class="px-space-md py-2 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="nearby-feed" href="#">Nearby Feed</a><a class="px-space-md py-2 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="listing-detail" href="#">Listing Detail</a><a class="px-space-md py-2 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="post-surplus" href="#">Post Surplus</a><a aria-current="page" class="px-space-md py-2 rounded-full transition-all bg-primary-container text-on-primary font-medium shadow-[0_2px_10px_rgba(20,51,42,0.08)]" data-path="impact-dashboard" href="#">Impact Dashboard</a></nav><div class="flex items-center gap-space-sm sm:gap-space-md flex-shrink-0"><div class="hidden sm:flex items-center p-1 rounded-full bg-surface-container-low"><button class="px-3 py-1.5 rounded-full font-label-sm text-label-sm bg-primary text-on-primary shadow-[0_1px_4px_rgba(20,51,42,0.06)] transition-all" type="button">Receiver</button><button class="px-3 py-1.5 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" type="button">Donor</button><button class="px-3 py-1.5 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" type="button">Volunteer</button></div><button aria-label="Notifications" class="relative p-2 rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 flex h-4 min-w-[16px] px-1 items-center justify-center rounded-full bg-tertiary-container text-on-primary font-label-sm text-[10px] font-semibold leading-none">3</span></button><div class="flex items-center gap-2.5 pl-2 sm:pl-3"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBYzu0T8w9_lto0EWsnfHzRRNim1vYIcwBUs3Nv6UsA1GouxgNkbyjTYth9eNl32yhfbrulKAy5Vr12uQ7dnREzHAPDaWiJ0hRWVzloIFpf7nNgSEE2FXYCtLgdPCXGbXlJY7ci8-iPl1Vwdhp0VRh0LUI0ar0Uxu3tEA1_gPZNk2u8cRVNQZ_Ci2vrTDvvsw_aq5m3qhaoKZPc3waNeQi8SbNljtifKWAPKvEDaBvXZUU1itxDDFYyQ"/><div class="hidden md:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-medium leading-none">Maya Lin</span><span class="font-label-sm text-label-sm text-on-surface-variant text-[11px] mt-0.5">Neighborhood Pioneer</span></div></div></div></div></header><main class="w-full pt-20 flex-1 bg-[#FAF8F3]"><div class="flex flex-col w-full">
+<!-- Interactive Top Banner & Controls -->
+<div class="w-full max-w-7xl mx-auto px-space-md lg:px-margin pt-space-lg pb-space-md">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg">
+<div class="flex flex-col gap-1 max-w-2xl">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm uppercase tracking-wider font-semibold">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">insights</span>
+            Metro District Node #04
+          </span>
+<span class="font-label-sm text-label-sm text-secondary">Verified Live Data</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-background tracking-tight mt-1">
+          Community Impact &amp; Rescue Metrics
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Real-time collective footprint of FoodShare network in Metro District.
+        </p>
+</div>
+<!-- Filter Pills & Export Action -->
+<div class="flex flex-wrap items-center gap-space-sm sm:gap-space-md">
+<div class="inline-flex p-1 rounded-full bg-surface-container-high shadow-sm" id="period-selector" role="tablist">
+<button class="period-btn px-4 py-2 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-all" data-period="week" type="button">This Week</button>
+<button class="period-btn px-4 py-2 rounded-full font-label-lg text-label-lg bg-surface-container-lowest text-primary font-semibold shadow-sm transition-all" data-period="month" type="button">This Month (Active)</button>
+<button class="period-btn px-4 py-2 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-all" data-period="ytd" type="button">Year to Date</button>
+<button class="period-btn px-4 py-2 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-all" data-period="all" type="button">All Time</button>
+</div>
+<button class="inline-flex items-center gap-2 px-space-md py-2.5 rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg shadow-md hover:shadow-lg transition-all active:scale-[0.98]" onclick="triggerReportDownload()" type="button">
+<span class="material-symbols-outlined text-lg">download</span>
+<span>Download Impact PDF / ESG Report</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Primary Stat Tiles -->
+<div class="w-full max-w-7xl mx-auto px-space-md lg:px-margin py-space-md">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Stat Tile 1: Meals Saved -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-lg shadow-sm hover:shadow-md transition-all group">
+<div class="absolute top-0 right-0 w-28 h-28 bg-surface-container-low rounded-bl-[100px] -z-0 opacity-80 group-hover:scale-105 transition-transform"></div>
+<div class="relative z-10 flex flex-col justify-between h-full">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase tracking-wider text-secondary font-medium">Meals Saved</span>
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">soup_kitchen</span>
+</div>
+</div>
+<div class="mt-4">
+<div class="font-headline-xl text-headline-xl text-on-surface font-bold tracking-tight" id="val-meals">14,820</div>
+<div class="flex items-center gap-1.5 mt-1 font-label-sm text-label-sm">
+<span class="inline-flex items-center text-primary font-semibold">
+<span class="material-symbols-outlined text-base">arrow_drop_up</span>+18.4%
+              </span>
+<span class="text-on-surface-variant">vs last month</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center gap-2">
+<div class="w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all duration-1000" style="width: 82%;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary whitespace-nowrap">82% of goal</span>
+</div>
+</div>
+</div>
+<!-- Stat Tile 2: Surplus Rescued -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-lg shadow-sm hover:shadow-md transition-all group">
+<div class="absolute top-0 right-0 w-28 h-28 bg-surface-container-low rounded-bl-[100px] -z-0 opacity-80 group-hover:scale-105 transition-transform"></div>
+<div class="relative z-10 flex flex-col justify-between h-full">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase tracking-wider text-secondary font-medium">Surplus Rescued</span>
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">scale</span>
+</div>
+</div>
+<div class="mt-4">
+<div class="font-headline-xl text-headline-xl text-on-surface font-bold tracking-tight" id="val-kg">6,240 <span class="font-headline-md text-headline-md font-semibold text-secondary">kg</span></div>
+<div class="flex items-center gap-1.5 mt-1 font-label-sm text-label-sm">
+<span class="text-on-surface-variant font-medium">Equivalent to 6.2 metric tons</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm text-primary">eco</span>
+<span>Zero landfill diversion pledge</span>
+</div>
+</div>
+</div>
+<!-- Stat Tile 3: CO₂ Avoided -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-lg shadow-sm hover:shadow-md transition-all group">
+<div class="absolute top-0 right-0 w-28 h-28 bg-surface-container-low rounded-bl-[100px] -z-0 opacity-80 group-hover:scale-105 transition-transform"></div>
+<div class="relative z-10 flex flex-col justify-between h-full">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase tracking-wider text-secondary font-medium">CO₂ Avoided</span>
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">nest_eco_leaf</span>
+</div>
+</div>
+<div class="mt-4">
+<div class="font-headline-xl text-headline-xl text-on-surface font-bold tracking-tight" id="val-co2">15.6 <span class="font-headline-md text-headline-md font-semibold text-secondary">tons</span></div>
+<div class="flex items-center gap-1.5 mt-1 font-label-sm text-label-sm">
+<span class="text-on-surface-variant font-medium">GHG emissions prevented</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm text-primary">directions_car</span>
+<span>= 34 car trips across US saved</span>
+</div>
+</div>
+</div>
+<!-- Stat Tile 4: Deliveries Completed -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-lg shadow-sm hover:shadow-md transition-all group">
+<div class="absolute top-0 right-0 w-28 h-28 bg-secondary-fixed rounded-bl-[100px] -z-0 opacity-50 group-hover:scale-105 transition-transform"></div>
+<div class="relative z-10 flex flex-col justify-between h-full">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase tracking-wider text-secondary font-medium">Deliveries Completed</span>
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary shadow-sm">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">pedal_bike</span>
+</div>
+</div>
+<div class="mt-4">
+<div class="font-headline-xl text-headline-xl text-on-surface font-bold tracking-tight" id="val-deliveries">1,142 <span class="font-headline-md text-headline-md font-semibold text-secondary">runs</span></div>
+<div class="flex items-center gap-1.5 mt-1 font-label-sm text-label-sm">
+<span class="inline-flex items-center text-primary font-semibold">
+<span class="material-symbols-outlined text-sm">verified</span>98.6%
+              </span>
+<span class="text-on-surface-variant">on-time pickup rate</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm text-secondary">timer</span>
+<span>Avg transit time: 14.2 mins</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Visual Analytics Section (Two Column Grid) -->
+<div class="w-full max-w-7xl mx-auto px-space-md lg:px-margin py-space-md">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Left Card: Daily Rescue Trends (kg & Meals) -->
+<div class="lg:col-span-7 rounded-xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-space-md">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Daily Rescue Trends</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Daily volume in kg rescued &amp; equivalent meal distribution</p>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-secondary">
+<span class="w-2.5 h-2.5 rounded-full bg-primary inline-block"></span>
+<span>Weight (kg)</span>
+</div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-secondary">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary inline-block"></span>
+<span>Meals Served</span>
+</div>
+</div>
+</div>
+<!-- SVG Line/Area Chart with Hover Tooltip Integration -->
+<div class="relative w-full h-72 pt-4">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 700 240">
+<defs>
+<lineargradient id="areaGradPrimary" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#0d6438" stop-opacity="0.28"></stop>
+<stop offset="100%" stop-color="#0d6438" stop-opacity="0.0"></stop>
+</lineargradient>
+<lineargradient id="areaGradTertiary" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#854600" stop-opacity="0.18"></stop>
+<stop offset="100%" stop-color="#854600" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Horizontal Gridlines -->
+<line stroke="#E4F1E7" stroke-dasharray="3,3" stroke-width="1" x1="40" x2="680" y1="30" y2="30"></line>
+<text fill="#707A70" font-family="Inter" font-size="11" text-anchor="end" x="30" y="34">400kg</text>
+<line stroke="#E4F1E7" stroke-dasharray="3,3" stroke-width="1" x1="40" x2="680" y1="80" y2="80"></line>
+<text fill="#707A70" font-family="Inter" font-size="11" text-anchor="end" x="30" y="84">300kg</text>
+<line stroke="#E4F1E7" stroke-dasharray="3,3" stroke-width="1" x1="40" x2="680" y1="130" y2="130"></line>
+<text fill="#707A70" font-family="Inter" font-size="11" text-anchor="end" x="30" y="134">200kg</text>
+<line stroke="#E4F1E7" stroke-width="1" x1="40" x2="680" y1="180" y2="180"></line>
+<text fill="#707A70" font-family="Inter" font-size="11" text-anchor="end" x="30" y="184">0kg</text>
+<!-- Area Path for Tertiary (Meals reference) -->
+<path d="M 60,160 Q 150,140 240,110 T 420,70 T 560,95 T 660,60 L 660,180 L 60,180 Z" fill="url(#areaGradTertiary)"></path>
+<path d="M 60,160 Q 150,140 240,110 T 420,70 T 560,95 T 660,60" fill="none" opacity="0.65" stroke="#854600" stroke-linecap="round" stroke-width="2"></path>
+<!-- Primary Metric Area & Smooth Curve -->
+<!-- Points: Mon(60,145), Tue(160,120), Wed(260,135), Thu(360,60), Fri(460,85), Sat(560,50), Sun(660,40) -->
+<path d="M 60,145 C 110,135 130,120 160,120 C 200,120 220,138 260,135 C 310,132 325,60 360,60 C 400,60 420,85 460,85 C 505,85 525,50 560,50 C 605,50 625,40 660,40 L 660,180 L 60,180 Z" fill="url(#areaGradPrimary)"></path>
+<path d="M 60,145 C 110,135 130,120 160,120 C 200,120 220,138 260,135 C 310,132 325,60 360,60 C 400,60 420,85 460,85 C 505,85 525,50 560,50 C 605,50 625,40 660,40" fill="none" stroke="#0D6438" stroke-linecap="round" stroke-width="3.5"></path>
+<!-- Data Point Indicators -->
+<circle class="transition-transform hover:scale-150 cursor-pointer" cx="60" cy="145" fill="#FFFFFF" r="4.5" stroke="#0D6438" stroke-width="2.5"></circle>
+<circle class="transition-transform hover:scale-150 cursor-pointer" cx="160" cy="120" fill="#FFFFFF" r="4.5" stroke="#0D6438" stroke-width="2.5"></circle>
+<circle class="transition-transform hover:scale-150 cursor-pointer" cx="260" cy="135" fill="#FFFFFF" r="4.5" stroke="#0D6438" stroke-width="2.5"></circle>
+<!-- Highlighted Point for Thursday with Active Callout Indicator -->
+<line stroke="#0D6438" stroke-dasharray="3,3" stroke-width="1.5" x1="360" x2="360" y1="25" y2="180"></line>
+<circle class="animate-pulse cursor-pointer shadow-lg" cx="360" cy="60" fill="#0D6438" r="7" stroke="#FFFFFF" stroke-width="3"></circle>
+<circle class="transition-transform hover:scale-150 cursor-pointer" cx="460" cy="85" fill="#FFFFFF" r="4.5" stroke="#0D6438" stroke-width="2.5"></circle>
+<circle class="transition-transform hover:scale-150 cursor-pointer" cx="560" cy="50" fill="#FFFFFF" r="4.5" stroke="#0D6438" stroke-width="2.5"></circle>
+<circle class="transition-transform hover:scale-150 cursor-pointer" cx="660" cy="40" fill="#FFFFFF" r="4.5" stroke="#0D6438" stroke-width="2.5"></circle>
+<!-- X-Axis Labels -->
+<text fill="#46655A" font-family="Inter" font-size="12" font-weight="500" text-anchor="middle" x="60" y="206">Mon</text>
+<text fill="#46655A" font-family="Inter" font-size="12" font-weight="500" text-anchor="middle" x="160" y="206">Tue</text>
+<text fill="#46655A" font-family="Inter" font-size="12" font-weight="500" text-anchor="middle" x="260" y="206">Wed</text>
+<text fill="#0D6438" font-family="Inter" font-size="12" font-weight="700" text-anchor="middle" x="360" y="206">Thu</text>
+<text fill="#46655A" font-family="Inter" font-size="12" font-weight="500" text-anchor="middle" x="460" y="206">Fri</text>
+<text fill="#46655A" font-family="Inter" font-size="12" font-weight="500" text-anchor="middle" x="560" y="206">Sat</text>
+<text fill="#46655A" font-family="Inter" font-size="12" font-weight="500" text-anchor="middle" x="660" y="206">Sun</text>
+</svg>
+<!-- Interactive Hover Tooltip (explicitly pinned on Thursday) -->
+<div class="absolute left-1/2 -translate-x-[15%] sm:-translate-x-[20%] top-6 bg-inverse-surface text-inverse-on-surface px-3 py-2 rounded-lg shadow-xl pointer-events-none transform -translate-y-2 flex flex-col gap-0.5 z-20">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm font-semibold text-primary-fixed">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-fixed"></span>
+              Thursday Peak
+            </div>
+<div class="font-body-sm text-body-sm font-semibold">340 kg rescued (850 meals)</div>
+<div class="font-label-sm text-[11px] text-surface-variant font-normal">Supermarket end-of-week surplus batch</div>
+</div>
+</div>
+<!-- Weekly Summary Footer Metric -->
+<div class="mt-4 pt-3 flex flex-wrap items-center justify-between gap-2 bg-surface-container-low px-space-md py-space-sm rounded-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">trending_up</span>
+<span class="font-body-sm text-body-sm text-on-surface">Weekly peak observed on weekends due to bakery network participation.</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-primary">Avg 295 kg/day</span>
+</div>
+</div>
+<!-- Right Card: Rescued Category Breakdown -->
+<div class="lg:col-span-5 rounded-xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Category Breakdown</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Surplus distribution by nutritional category</p>
+</div>
+<span class="material-symbols-outlined text-secondary">pie_chart</span>
+</div>
+<!-- Donut Chart & Stat Centerpiece -->
+<div class="flex flex-col sm:flex-row items-center justify-center gap-6 my-2">
+<div class="relative w-44 h-44 flex-shrink-0">
+<svg class="w-full h-full -rotate-90 transform" viewbox="0 0 160 160">
+<!-- Background Ring -->
+<circle cx="80" cy="80" fill="transparent" r="62" stroke="#E4F1E7" stroke-width="18"></circle>
+<!-- Fresh Produce: 38% -> 0.38 * 389.56 = 148.03 -->
+<circle class="transition-all hover:opacity-90 cursor-pointer" cx="80" cy="80" fill="transparent" r="62" stroke="#0D6438" stroke-dasharray="148.03 389.56" stroke-dashoffset="0" stroke-width="18"></circle>
+<!-- Bakery & Grains: 28% -> 0.28 * 389.56 = 109.08 -->
+<circle class="transition-all hover:opacity-90 cursor-pointer" cx="80" cy="80" fill="transparent" r="62" stroke="#46655A" stroke-dasharray="109.08 389.56" stroke-dashoffset="-148.03" stroke-width="18"></circle>
+<!-- Prepared Meals: 20% -> 0.20 * 389.56 = 77.91 -->
+<circle class="transition-all hover:opacity-90 cursor-pointer" cx="80" cy="80" fill="transparent" r="62" stroke="#854600" stroke-dasharray="77.91 389.56" stroke-dashoffset="-257.11" stroke-width="18"></circle>
+<!-- Dairy & Pantry: 14% -> 0.14 * 389.56 = 54.54 -->
+<circle class="transition-all hover:opacity-90 cursor-pointer" cx="80" cy="80" fill="transparent" r="62" stroke="#A65C0D" stroke-dasharray="54.54 389.56" stroke-dashoffset="-335.02" stroke-width="18"></circle>
+</svg>
+<!-- Central Donut Hole Counter -->
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none">
+<span class="font-headline-md text-headline-md font-bold text-on-surface leading-none">6,240</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">kg Total</span>
+</div>
+</div>
+<!-- Legend Items with Weight Calculations -->
+<div class="flex flex-col gap-2.5 w-full">
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low/60 hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary flex-shrink-0"></span>
+<span class="font-label-lg text-label-lg text-on-surface font-medium">Fresh Produce</span>
+</div>
+<div class="text-right">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">38%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">2,371 kg</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low/60 hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-secondary flex-shrink-0"></span>
+<span class="font-label-lg text-label-lg text-on-surface font-medium">Bakery &amp; Grains</span>
+</div>
+<div class="text-right">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">28%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">1,747 kg</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low/60 hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-tertiary flex-shrink-0"></span>
+<span class="font-label-lg text-label-lg text-on-surface font-medium">Prepared Meals</span>
+</div>
+<div class="text-right">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">20%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">1,248 kg</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low/60 hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-tertiary-container flex-shrink-0"></span>
+<span class="font-label-lg text-label-lg text-on-surface font-medium">Dairy &amp; Pantry</span>
+</div>
+<div class="text-right">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">14%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">874 kg</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-2 text-center sm:text-left">
+<p class="font-label-sm text-label-sm text-secondary">
+<span class="font-semibold text-primary">Nutritional standard met:</span> 100% compliance with safe cooling and temp-log requirements.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Community Leaderboards & Active Volunteer Queue -->
+<div class="w-full max-w-7xl mx-auto px-space-md lg:px-margin py-space-md">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+<!-- Left Card: Top Donors & Contributing Partners -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-md">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Top Donors &amp; Contributing Partners</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Recognizing champions preventing food waste at the source</p>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-secondary-container text-primary font-label-sm text-label-sm font-semibold">Live Rank</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Rank 1: Gold -->
+<div class="flex items-center justify-between p-3 rounded-xl bg-surface-container-low/40 hover:bg-surface-container-low transition-all">
+<div class="flex items-center gap-3">
+<div class="relative w-8 h-8 rounded-full bg-tertiary-fixed flex items-center justify-center font-bold text-on-tertiary-fixed shadow-sm">
+                  1
+                  <span class="material-symbols-outlined absolute -top-1 -right-1 text-xs text-tertiary-container" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Modern organic grocery storefront with lush produce display bins and friendly retail market staff, warm sunlight, photograph" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD25cwVaKZgbRAsIl2eSw9Oox-dq5ddU0zw7GHZ0FqZfX4Nbh1zBH8tjKxqbhTCFKQEb6BJjryP6bJ1HMFL1QScpimyc2H07EzJEDj-Odr54KBJ8otDh6IPWSAbYKYxWveXDpKVafL04jbBMUEjLcRcRRNjTADw2iAjcgzfztdFtDwHFjsOM3MWp-9rhQ3wTuM6P1OgV2NYPP5EhAAwQPVWJU7rIXPKucLExdD20kUP66uv8qdMaccxQQ"/>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Metro Fresh Market</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[10px] font-bold uppercase tracking-wider">Gold</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Regional Supermarket • Daily Logistics</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">1,420 <span class="font-label-md text-label-md text-secondary">kg</span></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">3,200 meals</span>
+</div>
+</div>
+<!-- Rank 2: Silver -->
+<div class="flex items-center justify-between p-3 rounded-xl bg-surface-container-low/40 hover:bg-surface-container-low transition-all">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center font-bold text-on-surface-variant shadow-sm">
+                  2
+                </div>
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Artisanal sourdough bakery kitchen with golden brown loaves on wooden trays, rustic baker portrait, warm morning glow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBUs_ZYQkDXnF5KqtcsmTYQll3NWVqccfKJJLLQfBXQjUkIaox5O7L5B7-ii6LXSK0CxXicbg1O9o4f1G-P0kiiVgcEgeq_nNvaYEQnaYGDfDdwgBTR2noPtWVUq2180PJYE_K3c_g83VGcNxyRxby4GICXM3NB93qn5DcoL0hTqI7mM0khXyysvLH-lPgK0gwFchZgZBe5yDkSnGb_td9ug6IFKWaeMgDeVyOJvgn1eqEaUZblJjXhQ"/>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">The Daily Loaf Bakery</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-variant text-on-surface-variant font-label-sm text-[10px] font-bold uppercase tracking-wider">Silver</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Artisan Bakery • Evening Surpluses</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">980 <span class="font-label-md text-label-md text-secondary">kg</span></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">2,150 meals</span>
+</div>
+</div>
+<!-- Rank 3: Bronze -->
+<div class="flex items-center justify-between p-3 rounded-xl bg-surface-container-low/40 hover:bg-surface-container-low transition-all">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed-dim/40 flex items-center justify-center font-bold text-tertiary shadow-sm">
+                  3
+                </div>
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Commercial culinary prep kitchen with stainless steel counters, chefs prepping wholesome vegetable dishes, clean lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJ6ZxGFiyWryk_9PDqA4v7a0WscvbRuLQlRmHPXmD361ghYKURMuoimfICOpNxWSNK3-ZjzeoQ0IKabwsm5Q2jUFDVbI6AXL0F16lWOO4Qmovh5idWtXLKXMFa6X0sem09ZUKpDTgGg3Cf1ijflrrBbuY-4rC65bSY7SsILbkW3SsKiCi2Uvx9nhBPq6PY5uKgoy63Y7J7nMUps9cWfeLg56CT5XMGLMGIx3OM5Lkiz9FhjAtj0j_6BQ"/>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Green Harvest Kitchens</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed-dim/40 text-tertiary font-label-sm text-[10px] font-bold uppercase tracking-wider">Bronze</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Catering &amp; Deli • Scheduled Trays</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">760 <span class="font-label-md text-label-md text-secondary">kg</span></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">1,820 meals</span>
+</div>
+</div>
+<!-- Rank 4: Standard -->
+<div class="flex items-center justify-between p-3 rounded-xl bg-surface-container-low/40 hover:bg-surface-container-low transition-all">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-secondary text-sm">
+                  4
+                </div>
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Neighborhood corner grocery market exterior with fresh fruit crates on display, sunny urban sidewalk, warm street photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1A6v-ZwxW4fGn6zzZtyqW8pJS-AHaNpClL6QW6aqmBDGAn62nQ3s79d0rPNVJeU-w6w-_YJj-bEQol4y15uLoRvBn3pCpyznAXSi0sQTJG3Q0_DL4AwYNdFojU5hJHJaVmLQJIgaZ_KDn6YK6DNtG3jhBeLYKwlS5CDKtwG4o5XJgmRg8Y7UTGYGrE5Y5th_I40eDATyOGFLLb4GWTSz72_l5udSaPxZTSTR9kR611bLEBIC0WDOppQ"/>
+<div>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">Central Food Mart</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Independent Grocer • Perishables</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">520 <span class="font-label-md text-label-md text-secondary">kg</span></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">1,130 meals</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary">32 additional certified donor organizations</span>
+<a class="font-label-sm text-label-sm font-bold text-primary hover:underline flex items-center gap-1" href="#">
+<span>View Donor Registry</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Right Card: Top Receiver Organizations & Community Hubs -->
+<div class="rounded-xl bg-surface-container-lowest p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-md">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Top Receiver Organizations</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Community pantries and community kitchens serving nutritious meals</p>
+</div>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">volunteer_activism</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Receiver 1 -->
+<div class="p-4 rounded-xl bg-surface-container-low/40 hover:bg-surface-container-low transition-all flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-secondary-container flex items-center justify-center text-primary font-bold">
+<span class="material-symbols-outlined">night_shelter</span>
+</div>
+<div>
+<h3 class="font-label-lg text-label-lg font-bold text-on-surface">St. Jude Community Shelter</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Downtown Core • Family Resident Support</p>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">840</span>
+<span class="font-label-sm text-label-sm text-secondary block font-medium">meals received</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden mt-1">
+<div class="bg-primary h-full rounded-full" style="width: 88%;"></div>
+</div>
+<div class="flex justify-between font-label-sm text-[11px] text-on-surface-variant">
+<span>Distribution capacity: 950 meals/wk</span>
+<span class="text-primary font-semibold">Priority Fast-Dispatch Hub</span>
+</div>
+</div>
+<!-- Receiver 2 -->
+<div class="p-4 rounded-xl bg-surface-container-low/40 hover:bg-surface-container-low transition-all flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-secondary font-bold">
+<span class="material-symbols-outlined">school</span>
+</div>
+<div>
+<h3 class="font-label-lg text-label-lg font-bold text-on-surface">Downtown Youth Pantry</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Westside District • After-school Nourishment</p>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">620</span>
+<span class="font-label-sm text-label-sm text-secondary block font-medium">meals received</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden mt-1">
+<div class="bg-primary h-full rounded-full" style="width: 72%;"></div>
+</div>
+<div class="flex justify-between font-label-sm text-[11px] text-on-surface-variant">
+<span>Distribution capacity: 800 meals/wk</span>
+<span class="text-secondary font-semibold">Allergens Verified Safe</span>
+</div>
+</div>
+<!-- Receiver 3 -->
+<div class="p-4 rounded-xl bg-surface-container-low/40 hover:bg-surface-container-low transition-all flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-tertiary font-bold">
+<span class="material-symbols-outlined">family_restroom</span>
+</div>
+<div>
+<h3 class="font-label-lg text-label-lg font-bold text-on-surface">Eastside Family Kitchen</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Riverside Neighborhood • Weekly Communal Meals</p>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">510</span>
+<span class="font-label-sm text-label-sm text-secondary block font-medium">meals received</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden mt-1">
+<div class="bg-primary h-full rounded-full" style="width: 64%;"></div>
+</div>
+<div class="flex justify-between font-label-sm text-[11px] text-on-surface-variant">
+<span>Distribution capacity: 700 meals/wk</span>
+<span class="text-secondary font-semibold">Cold Storage Capacity Available</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary">Serving over 1,840 local households monthly</span>
+<a class="font-label-sm text-label-sm font-bold text-primary hover:underline flex items-center gap-1" href="#">
+<span>View All Partner Shelters</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Volunteer Action Banner at bottom -->
+<div class="w-full max-w-7xl mx-auto px-space-md lg:px-margin pt-space-sm pb-space-xl">
+<div class="relative overflow-hidden rounded-xl bg-inverse-surface text-inverse-on-surface p-space-lg shadow-md flex flex-col md:flex-row items-center justify-between gap-space-lg">
+<div class="relative z-10 flex items-center gap-space-md">
+<div class="relative flex-shrink-0">
+<div class="w-14 h-14 rounded-full bg-primary-container flex items-center justify-center text-on-primary shadow-lg">
+<span class="material-symbols-outlined text-3xl">electric_moped</span>
+</div>
+<span class="absolute bottom-0 right-0 w-4 h-4 rounded-full bg-primary-fixed border-2 border-inverse-surface flex items-center justify-center">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm font-bold text-surface-container-lowest">Volunteer Fleet Status</span>
+<span class="px-2.5 py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-xs font-semibold uppercase tracking-wider">Live Radar</span>
+</div>
+<p class="font-body-md text-body-md text-surface-variant mt-0.5">
+<span class="font-semibold text-primary-fixed">28 couriers active right now</span> • Average response time <span class="font-semibold text-primary-fixed">14 mins</span> across 8 micro-zones.
+          </p>
+</div>
+</div>
+<div class="relative z-10 flex items-center gap-space-sm flex-shrink-0 w-full md:w-auto justify-end">
+<button class="w-full md:w-auto px-6 py-3 rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg font-semibold shadow-sm hover:shadow transition-all flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-xl">near_me</span>
+<span>Claim a Pending Pickup</span>
+</button>
+<button class="hidden sm:inline-flex px-4 py-3 rounded-full bg-surface-container-highest/20 hover:bg-surface-container-highest/30 text-surface-container-lowest font-label-lg text-label-lg transition-colors" type="button">
+<span>View Heatmap</span>
+</button>
+</div>
+<!-- Subtle Decorative Accent Background -->
+<div class="absolute -right-10 -bottom-10 w-64 h-64 bg-primary/10 rounded-full blur-2xl pointer-events-none"></div>
+</div>
+</div>
+</div>
+<script>
+  // Period filter dynamic switching
+  document.querySelectorAll('.period-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.period-btn').forEach(b => {
+        b.classList.remove('bg-surface-container-lowest', 'text-primary', 'font-semibold', 'shadow-sm');
+        b.classList.add('text-on-surface-variant');
+      });
+      this.classList.add('bg-surface-container-lowest', 'text-primary', 'font-semibold', 'shadow-sm');
+      this.classList.remove('text-on-surface-variant');
+
+      const period = this.getAttribute('data-period');
+      updateMetricsForPeriod(period);
+    });
+  });
+
+  function updateMetricsForPeriod(period) {
+    const mealsEl = document.getElementById('val-meals');
+    const kgEl = document.getElementById('val-kg');
+    const co2El = document.getElementById('val-co2');
+    const runsEl = document.getElementById('val-deliveries');
+
+    if (!mealsEl) return;
+
+    if (period === 'week') {
+      mealsEl.innerText = '3,410';
+      kgEl.innerHTML = '1,420 <span class="font-headline-md text-headline-md font-semibold text-secondary">kg</span>';
+      co2El.innerHTML = '3.5 <span class="font-headline-md text-headline-md font-semibold text-secondary">tons</span>';
+      runsEl.innerHTML = '264 <span class="font-headline-md text-headline-md font-semibold text-secondary">runs</span>';
+    } else if (period === 'month') {
+      mealsEl.innerText = '14,820';
+      kgEl.innerHTML = '6,240 <span class="font-headline-md text-headline-md font-semibold text-secondary">kg</span>';
+      co2El.innerHTML = '15.6 <span class="font-headline-md text-headline-md font-semibold text-secondary">tons</span>';
+      runsEl.innerHTML = '1,142 <span class="font-headline-md text-headline-md font-semibold text-secondary">runs</span>';
+    } else if (period === 'ytd') {
+      mealsEl.innerText = '94,200';
+      kgEl.innerHTML = '39,580 <span class="font-headline-md text-headline-md font-semibold text-secondary">kg</span>';
+      co2El.innerHTML = '98.9 <span class="font-headline-md text-headline-md font-semibold text-secondary">tons</span>';
+      runsEl.innerHTML = '7,310 <span class="font-headline-md text-headline-md font-semibold text-secondary">runs</span>';
+    } else {
+      mealsEl.innerText = '142,800';
+      kgEl.innerHTML = '59,970 <span class="font-headline-md text-headline-md font-semibold text-secondary">kg</span>';
+      co2El.innerHTML = '149.2 <span class="font-headline-md text-headline-md font-semibold text-secondary">tons</span>';
+      runsEl.innerHTML = '11,040 <span class="font-headline-md text-headline-md font-semibold text-secondary">runs</span>';
+    }
+  }
+
+  function triggerReportDownload() {
+    const originalText = event.currentTarget.innerHTML;
+    const btn = event.currentTarget;
+    btn.innerHTML = '<span class="material-symbols-outlined text-lg animate-spin">refresh</span><span>Generating ESG Report...</span>';
+    btn.classList.add('opacity-80', 'pointer-events-none');
+    setTimeout(() => {
+      btn.innerHTML = '<span class="material-symbols-outlined text-lg">check_circle</span><span>Report Ready!</span>';
+      setTimeout(() => {
+        btn.innerHTML = originalText;
+        btn.classList.remove('opacity-80', 'pointer-events-none');
+      }, 2000);
+    }, 1200);
+  }
+</script></main><footer class="w-full bg-surface-container-low mt-auto"><div class="max-w-7xl mx-auto px-space-md lg:px-margin py-space-xl"><div class="grid grid-cols-1 md:grid-cols-12 gap-space-lg pb-space-lg"><div class="md:col-span-5 flex flex-col gap-space-sm"><div class="flex items-center gap-2"><img alt="FoodShare Logo" class="h-6 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Wn24S97Z_pJAXLgaY1ZIHDdJNPdHRj7nIU3hSrZ76HWEX6on8Oc3OKuQP71K2tdArc6T_mrDJ__RUi2wmYJ8RxmtIQ7xjKW0hQmL_-XLjs2BTEFsK3hilOBB40tW1qIX--aqOQXHDo8lfv9jjJXU8sXuI2aMmgp4DCKBCDOEoCTaquxufZ55HPyBIqr1uufsrKGAvXCuCKwfZqyokfaGTBz2BBeQ6L4f8Ug4RHvVte0BBdWpJZX2yho6bF"/><span class="font-headline-sm text-headline-sm text-primary">FoodShare</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Connecting local neighborhood surpluses, community kitchens, and mindful households to eliminate edible food waste and promote accessible nutrition.</p><div class="flex items-center gap-space-md pt-2"><div class="flex items-center gap-1.5 font-label-sm text-label-sm text-secondary"><span class="material-symbols-outlined text-base text-primary">eco</span><span>48.2k kg CO2 avoided</span></div><div class="flex items-center gap-1.5 font-label-sm text-label-sm text-secondary"><span class="material-symbols-outlined text-base text-primary">volunteer_activism</span><span>19,410 meals shared</span></div></div></div><div class="md:col-span-2 sm:col-span-4 flex flex-col gap-2"><h4 class="font-label-lg text-label-lg text-on-surface font-semibold mb-1">Rescue Network</h4><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="nearby-feed" href="#">Neighborhood Feed</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="post-surplus" href="#">Donate Food</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Pantry Partners</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Volunteer Couriers</a></div><div class="md:col-span-2 sm:col-span-4 flex flex-col gap-2"><h4 class="font-label-lg text-label-lg text-on-surface font-semibold mb-1">Nutrition &amp; Trust</h4><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Food Safety Protocols</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Dietary Guidelines</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="impact-dashboard" href="#">Open Impact Data</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Community Guidelines</a></div><div class="md:col-span-3 sm:col-span-4 flex flex-col gap-2"><h4 class="font-label-lg text-label-lg text-on-surface font-semibold mb-1">Open Platform</h4><p class="font-body-sm text-body-sm text-on-surface-variant">Built on open data standards and volunteer community governance. Free forever for local recipients.</p><div class="flex items-center gap-2 pt-2"><span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-highest font-label-sm text-label-sm text-on-surface-variant"><span class="material-symbols-outlined text-xs">verified_user</span>Safe Handling Verified</span></div></div></div><div class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-4 font-label-sm text-label-sm text-on-surface-variant"><p>© 2025 FoodShare Community Collective. All rights reserved.</p><div class="flex items-center gap-space-lg"><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a><a class="hover:text-primary transition-colors" href="#">Terms of Service</a><a class="hover:text-primary transition-colors" href="#">Transparency Registry</a></div></div></div></footer></body></html>

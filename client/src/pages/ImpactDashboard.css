@@ -1,0 +1,120 @@
+.impact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .impact-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .zone-tag {
+    font-size: 0.75rem;
+    color: #0d6438;
+    font-weight: 700;
+  }
+  
+  .download-pdf-btn {
+    background: #0d6438;
+    color: #ffffff;
+    border: none;
+    padding: 0.625rem 1.25rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  
+  .kpi-card {
+    background: #ffffff;
+    padding: 1.25rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .kpi-title {
+    display: block;
+    font-size: 0.75rem;
+    color: #6b7280;
+    font-weight: 700;
+  }
+  
+  .kpi-value {
+    display: block;
+    font-size: 1.75rem;
+    color: #131e18;
+    margin: 0.375rem 0;
+  }
+  
+  .kpi-sub {
+    font-size: 0.75rem;
+    color: #6b7280;
+  }
+  
+  .kpi-sub.green { color: #0d6438; }
+  
+  .impact-charts-grid, .leaderboards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  
+  @media (min-width: 768px) {
+    .impact-charts-grid, .leaderboards-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  .chart-card, .leaderboard-card {
+    background: #ffffff;
+    padding: 1.25rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .mock-area-chart {
+    height: 180px;
+    background: #f9fafb;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9ca3af;
+    margin-top: 1rem;
+  }
+  
+  .breakdown-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+  
+  .b-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    background: #f9fafb;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+  }
+  
+  .rank-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+  }
+  
+  .rank-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #f3f4f6;
+  }

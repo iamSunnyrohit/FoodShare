@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary-container": "#ceffd9", "on-tertiary": "#ffffff", "on-background": "#131e18", "surface-container-highest": "#d9e6dc", "outline": "#707a70", "surface-variant": "#d9e6dc", "background": "#f0fdf3", "inverse-primary": "#89d7a1", "primary": "#0d6438", "primary-fixed-dim": "#89d7a1", "on-error": "#ffffff", "secondary-fixed-dim": "#accec1", "on-surface": "#131e18", "on-primary-fixed-variant": "#00522c", "tertiary-fixed-dim": "#ffb77d", "surface-container": "#e4f1e7", "secondary-container": "#c5e7da", "secondary-fixed": "#c8eadc", "inverse-surface": "#28332d", "error-container": "#ffdad6", "on-surface-variant": "#3f4941", "on-secondary-container": "#4a695e", "tertiary": "#854600", "error": "#ba1a1a", "on-error-container": "#93000a", "tertiary-fixed": "#ffdcc3", "inverse-on-surface": "#e7f4ea", "surface-container-high": "#dfebe2", "outline-variant": "#bfc9be", "on-tertiary-container": "#fff0e7", "on-secondary-fixed": "#012018", "surface-container-low": "#eaf7ed", "on-tertiary-fixed": "#2f1500", "on-tertiary-fixed-variant": "#6e3900", "surface-tint": "#1a6c40", "on-primary": "#ffffff", "secondary": "#46655a", "tertiary-container": "#a65c0d", "primary-container": "#2f7d4f", "on-secondary": "#ffffff", "surface": "#f0fdf3", "primary-fixed": "#a4f4bc", "on-primary-fixed": "#00210e", "surface-dim": "#d0ddd4", "on-secondary-fixed-variant": "#2e4d43", "surface-container-lowest": "#ffffff", "surface-bright": "#f0fdf3" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "2rem", "space-lg": "1.5rem", "gutter-mobile": "1rem", "space-md": "1rem", "space-sm": "0.75rem", "space-xs": "0.5rem", "space-xl": "2rem", "gutter": "1.5rem", "margin-mobile": "1rem" }, "fontFamily": { "label-sm": ["Inter"], "headline-md": ["Epilogue"], "body-sm": ["Inter"], "body-lg": ["Inter"], "headline-xl-mobile": ["Epilogue"], "headline-xl": ["Epilogue"], "headline-lg-mobile": ["Epilogue"], "label-lg": ["Inter"], "headline-lg": ["Epilogue"], "label-md": ["Inter"], "headline-sm": ["Epilogue"], "body-md": ["Inter"] }, "fontSize": { "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "500" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "headline-xl-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-md flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-sm"><div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary-container text-[24px]">eco</span><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-bold">FoodShare</span></div><div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container/60"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-primary-container"></span></span><span class="font-label-sm text-label-sm text-primary font-semibold tracking-wide">Live Dispatch</span></div></div><div class="flex items-center gap-space-xs"><button aria-label="Notifications" class="relative min-w-[44px] min-h-[44px] w-11 h-11 flex items-center justify-center rounded-full hover:bg-surface-container transition-colors text-on-surface-variant"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-tertiary-container ring-2 ring-surface"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface flex-1"><div class="flex flex-col w-full pb-8">
+<!-- Status & Dispatch Bar -->
+<section class="px-space-md py-space-sm bg-surface-container-low">
+<div class="flex items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="relative flex h-3 w-3 shrink-0">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+</span>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-label-lg text-primary font-bold leading-tight truncate">Online &amp; Ready</span>
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+</div>
+<p class="font-body-sm text-label-sm text-on-surface-variant truncate">Mission / SOMA District (3.2 km radius)</p>
+</div>
+</div>
+<button aria-label="Toggle Dispatch Mode" class="shrink-0 min-h-[44px] px-3.5 py-1.5 rounded-full bg-surface-container-lowest shadow-sm flex items-center gap-1.5 text-primary hover:bg-surface-container transition-all" id="toggleOnlineBtn">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+<span class="font-label-md text-label-md font-semibold">Active</span>
+</button>
+</div>
+<!-- Transport Mode Pills -->
+<div aria-label="Transport Mode Selector" class="flex items-center gap-2 mt-3 overflow-x-auto pb-1" role="tablist">
+<button class="transport-btn shrink-0 min-h-[44px] px-3.5 py-2 rounded-full bg-primary text-on-primary shadow-sm flex items-center gap-1.5 transition-all" data-mode="bike">
+<span class="material-symbols-outlined text-[18px]">pedal_bike</span>
+<span class="font-label-md text-label-md font-medium">Bicycle / Cargo</span>
+</button>
+<button class="transport-btn shrink-0 min-h-[44px] px-3.5 py-2 rounded-full bg-surface-container text-on-surface-variant shadow-sm flex items-center gap-1.5 transition-all" data-mode="foot">
+<span class="material-symbols-outlined text-[18px]">directions_walk</span>
+<span class="font-label-md text-label-md font-medium">On Foot</span>
+</button>
+<button class="transport-btn shrink-0 min-h-[44px] px-3.5 py-2 rounded-full bg-surface-container text-on-surface-variant shadow-sm flex items-center gap-1.5 transition-all" data-mode="car">
+<span class="material-symbols-outlined text-[18px]">electric_car</span>
+<span class="font-label-md text-label-md font-medium">EV / Hybrid</span>
+</button>
+</div>
+<!-- Courier Quick Stats Grid -->
+<div class="grid grid-cols-4 gap-2 mt-3">
+<div class="bg-surface-container-lowest p-2.5 rounded-xl shadow-sm text-center">
+<div class="flex items-center justify-center text-primary mb-0.5">
+<span class="material-symbols-outlined text-[18px]">inventory_2</span>
+</div>
+<p class="font-headline-sm text-label-lg font-bold text-on-surface">3</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Batches</p>
+</div>
+<div class="bg-surface-container-lowest p-2.5 rounded-xl shadow-sm text-center">
+<div class="flex items-center justify-center text-tertiary-container mb-0.5">
+<span class="material-symbols-outlined text-[18px]">local_shipping</span>
+</div>
+<p class="font-headline-sm text-label-lg font-bold text-on-surface">1</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Active Run</p>
+</div>
+<div class="bg-surface-container-lowest p-2.5 rounded-xl shadow-sm text-center">
+<div class="flex items-center justify-center text-secondary mb-0.5">
+<span class="material-symbols-outlined text-[18px]">timer</span>
+</div>
+<p class="font-headline-sm text-label-lg font-bold text-on-surface">18m</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Avg Trip</p>
+</div>
+<div class="bg-surface-container-lowest p-2.5 rounded-xl shadow-sm text-center">
+<div class="flex items-center justify-center text-primary mb-0.5">
+<span class="material-symbols-outlined text-[18px]">shield</span>
+</div>
+<p class="font-headline-sm text-label-lg font-bold text-on-surface">99.4%</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Safe Score</p>
+</div>
+</div>
+</section>
+<!-- Active Mission Spotlight (Top Priority Hero Card) -->
+<section class="px-space-md mt-4">
+<div class="relative overflow-hidden rounded-2xl bg-primary text-on-primary shadow-md">
+<!-- Glow ambient accent -->
+<div class="absolute -right-12 -top-12 w-44 h-44 rounded-full bg-primary-fixed-dim/20 blur-2xl pointer-events-none"></div>
+<div class="p-4 relative z-10 flex flex-col gap-3">
+<!-- Top Status Row -->
+<div class="flex items-center justify-between gap-2">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-on-primary/15 backdrop-blur-sm">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-on-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-on-primary"></span>
+</span>
+<span class="font-label-sm text-label-sm font-semibold tracking-wider uppercase text-on-primary">Step 3 of 4: In Transit</span>
+</div>
+<div class="flex items-center gap-1 text-on-primary-container font-label-md text-label-md font-semibold">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>ETA 12m (17:42)</span>
+</div>
+</div>
+<!-- Cargo Title & Quick Specs -->
+<div>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-primary leading-tight">18 Gourmet Grain Bowls &amp; Fresh Salads</h2>
+<div class="flex items-center gap-2 mt-1 text-on-primary-container font-body-sm text-body-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">ac_unit</span> Chilled Pack
+            </span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">weight</span> 8.4 kg
+            </span>
+</div>
+</div>
+<!-- Route Visualization Strip -->
+<div class="bg-on-primary/10 rounded-xl p-3 flex flex-col gap-2.5">
+<div class="flex items-start gap-2.5">
+<div class="flex flex-col items-center mt-0.5">
+<span class="material-symbols-outlined text-secondary-fixed text-[18px]">storefront</span>
+<div class="w-0.5 h-6 bg-secondary-fixed/40 my-0.5"></div>
+<span class="material-symbols-outlined text-tertiary-fixed text-[18px]">location_on</span>
+</div>
+<div class="flex-1 min-w-0 flex flex-col gap-2">
+<div class="flex items-baseline justify-between gap-1">
+<span class="font-label-md text-label-md text-secondary-fixed truncate">Harvest Kitchen (442 Elm St)</span>
+<span class="font-label-sm text-label-sm text-on-primary/70 shrink-0">Picked 17:28</span>
+</div>
+<div class="flex items-baseline justify-between gap-1">
+<span class="font-label-md text-label-md text-on-primary font-semibold truncate">St. Jude Shelter (820 Folsom St)</span>
+<span class="font-label-sm text-label-sm text-primary-fixed shrink-0">1.1 km left</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1.5 px-2 py-1 rounded-lg bg-on-primary/10 text-on-primary-container text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed-dim shrink-0">info</span>
+<span class="truncate">Thermal bag sealed • Drop at Side Intake Gate</span>
+</div>
+</div>
+<!-- Primary Mobile Action Buttons -->
+<div class="flex flex-col gap-2 pt-1">
+<button aria-label="Mark Delivered and Scan QR Code" class="w-full min-h-[52px] rounded-full bg-surface-container-lowest text-primary shadow-sm flex items-center justify-center gap-2 hover:bg-surface-container transition-all active:scale-[0.99]" id="scanDeliveredBtn">
+<span class="material-symbols-outlined text-[22px]">qr_code_scanner</span>
+<span class="font-headline-sm text-label-lg font-bold">Mark Delivered &amp; Scan QR</span>
+</button>
+<div class="grid grid-cols-2 gap-2">
+<button aria-label="Open Turn-by-Turn GPS Navigation" class="min-h-[48px] rounded-full bg-on-primary/15 text-on-primary flex items-center justify-center gap-1.5 hover:bg-on-primary/25 transition-all text-label-md font-label-md font-semibold">
+<span class="material-symbols-outlined text-[18px]">turn_sharp_right</span>
+<span>Turn-by-Turn GPS</span>
+</button>
+<button aria-label="Call Shelter Intake Coordinator" class="min-h-[48px] rounded-full bg-on-primary/15 text-on-primary flex items-center justify-center gap-1.5 hover:bg-on-primary/25 transition-all text-label-md font-label-md font-semibold">
+<span class="material-symbols-outlined text-[18px]">call</span>
+<span>Call Shelter</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Filter & Sort Chips -->
+<section class="px-space-md mt-5">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Available Pickups</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold">3 Nearby</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">near_me</span>
+<span>Closest (&lt; 1.5 km)</span>
+</div>
+</div>
+<!-- Scrolling Chip Group -->
+<div aria-label="Pickup Filters" class="flex items-center gap-2 overflow-x-auto pb-1" role="toolbar">
+<button class="filter-chip shrink-0 min-h-[44px] px-3.5 py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md font-semibold shadow-sm flex items-center gap-1">
+<span>All Pickups (4)</span>
+</button>
+<button class="filter-chip shrink-0 min-h-[44px] px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md font-medium shadow-sm flex items-center gap-1 hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-tertiary text-[16px]">local_fire_department</span>
+<span>Expiring Soon (&lt;40m)</span>
+</button>
+<button class="filter-chip shrink-0 min-h-[44px] px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md font-medium shadow-sm flex items-center gap-1 hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[16px]">inventory</span>
+<span>Light Cargo (&lt;10kg)</span>
+</button>
+<button class="filter-chip shrink-0 min-h-[44px] px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md font-medium shadow-sm flex items-center gap-1 hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[16px]">pedal_bike</span>
+<span>Cargo Bike</span>
+</button>
+</div>
+</section>
+<!-- Available Pickup Queue (Cards Stack) -->
+<section class="px-space-md mt-3 flex flex-col gap-3.5">
+<!-- Card 1: Urgent Expiry -->
+<article class="bg-surface-container-lowest rounded-2xl p-4 shadow-sm flex flex-col gap-3 relative overflow-hidden transition-all hover:shadow-md">
+<!-- Top Urgency Accent Bar -->
+<div class="absolute top-0 left-0 right-0 h-1 bg-tertiary-container"></div>
+<!-- Header: Tags & Distance -->
+<div class="flex items-center justify-between gap-2 mt-0.5">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">hourglass_bottom</span>
+<span>Expiring in 38m</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[16px]">navigation</span>
+<span>0.8 km away</span>
+</div>
+</div>
+<!-- Item Title & Media Placeholder -->
+<div class="flex gap-3 items-start">
+<div class="w-20 h-20 rounded-xl bg-surface-container shrink-0 overflow-hidden relative shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Rustic freshly baked golden artisan sourdough loaves and French baguettes piled in natural wicker baskets with warm natural morning lighting and sustainable community kitchen backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjmmEWN_nvUzY9cj_aD_OpkBXhhYHei3p39Uo3FtwfiylNrOkkgLjCl1A_HNeKiJB6jo1307XKjU-iZOqMplD_XrvcR9usERm6Ln8tArE7oBGZGs9MFyNt9IZQxjdUACWVfTDr6q3RXE3Sqgoi4Frj0koXbhX51WErBxTqqgThAD32bb6HxqgQwfM4QusTzrCM-cGkXeYXQAshU_iU1uJljpaAo0Lwj72WBnMKKESOrdmGxiroUWX2Ig"/>
+<div class="absolute bottom-1 right-1 bg-inverse-surface/80 text-inverse-on-surface px-1.5 py-0.5 rounded text-[10px] font-semibold">28 pcs</div>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="font-headline-sm text-label-lg font-bold text-on-surface leading-snug line-clamp-2">Artisan Sourdough &amp; French Baguettes</h3>
+<p class="font-body-sm text-label-sm text-on-surface-variant mt-1 flex items-center gap-1 truncate">
+<span class="font-medium text-on-surface">The Daily Loaf</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+<span class="truncate">Mission Family Pantry</span>
+</p>
+<div class="flex items-center gap-2 mt-1.5 flex-wrap">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">14.2 kg • Dry</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/70 text-primary font-label-sm text-label-sm font-semibold">4.8 kg CO2 saved</span>
+</div>
+</div>
+</div>
+<!-- Transit Note & Route Badge -->
+<div class="bg-surface-container-low rounded-xl p-2.5 flex items-center justify-between gap-2 text-label-sm font-label-sm">
+<div class="flex items-center gap-1.5 text-on-surface-variant truncate">
+<span class="material-symbols-outlined text-[16px] text-primary shrink-0">key</span>
+<span class="truncate">Rear alley code #4412. Knock twice.</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface shrink-0 font-medium">
+<span class="material-symbols-outlined text-[16px] text-secondary">directions_bike</span>
+<span>14 min run</span>
+</div>
+</div>
+<!-- Primary Accept CTA -->
+<button class="pickup-accept-btn w-full min-h-[48px] rounded-full bg-primary text-on-primary font-headline-sm text-label-lg font-bold shadow-sm flex items-center justify-center gap-2 hover:bg-primary-container transition-all active:scale-[0.99]" data-title="Artisan Sourdough &amp; French Baguettes">
+<span>Accept &amp; Pick Up Route</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</article>
+<!-- Card 2: Fresh Produce -->
+<article class="bg-surface-container-lowest rounded-2xl p-4 shadow-sm flex flex-col gap-3 relative overflow-hidden transition-all hover:shadow-md">
+<!-- Header: Tags & Distance -->
+<div class="flex items-center justify-between gap-2">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container text-primary font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Ready Now</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[16px]">navigation</span>
+<span>1.2 km away</span>
+</div>
+</div>
+<!-- Item Title & Media Placeholder -->
+<div class="flex gap-3 items-start">
+<div class="w-20 h-20 rounded-xl bg-surface-container shrink-0 overflow-hidden relative shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Vibrant organic green romaine lettuce heads and ripe red vine tomatoes packed neatly inside recyclable agricultural crates in soft diffused daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPrubkAscmAY5fAVCMNiwUJw9dK6HsJksNP2SLQHbe1h5CHwfHRrrupNUgOklG0zGChsJcH0z4fj8ZAMxIWN8T6fW0ibBwNairhFjHNjyptnav4gKiyJcmjQpC_hZD5iUfBDfR5ZG0HTbSNnCXmRh8N_T7F5XzAy43YmDTxVp6o_wfRAphZaR9taEFMTPux0Gp7qO2yShejIsD8sfTX0hVTVu6Y2zDCqR_ZeJYGWQG_uJCjYpeSUJLOA"/>
+<div class="absolute bottom-1 right-1 bg-inverse-surface/80 text-inverse-on-surface px-1.5 py-0.5 rounded text-[10px] font-semibold">2 Crates</div>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="font-headline-sm text-label-lg font-bold text-on-surface leading-snug line-clamp-2">Fresh Organic Romaine &amp; Vine Tomatoes</h3>
+<p class="font-body-sm text-label-sm text-on-surface-variant mt-1 flex items-center gap-1 truncate">
+<span class="font-medium text-on-surface">Valley Green Market</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+<span class="truncate">Eastside Comm. Kitchen</span>
+</p>
+<div class="flex items-center gap-2 mt-1.5 flex-wrap">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">22.0 kg • Cargo/EV</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/70 text-primary font-label-sm text-label-sm font-semibold">7.2 kg CO2 saved</span>
+</div>
+</div>
+</div>
+<!-- Transit Note & Route Badge -->
+<div class="bg-surface-container-low rounded-xl p-2.5 flex items-center justify-between gap-2 text-label-sm font-label-sm">
+<div class="flex items-center gap-1.5 text-on-surface-variant truncate">
+<span class="material-symbols-outlined text-[16px] text-primary shrink-0">door_front</span>
+<span class="truncate">Loading bay ramp accessible • Staff on-site</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface shrink-0 font-medium">
+<span class="material-symbols-outlined text-[16px] text-secondary">directions_bike</span>
+<span>20 min run</span>
+</div>
+</div>
+<!-- Primary Accept CTA -->
+<button class="pickup-accept-btn w-full min-h-[48px] rounded-full bg-primary text-on-primary font-headline-sm text-label-lg font-bold shadow-sm flex items-center justify-center gap-2 hover:bg-primary-container transition-all active:scale-[0.99]" data-title="Fresh Organic Romaine &amp; Vine Tomatoes">
+<span>Accept &amp; Pick Up Route</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</article>
+<!-- Card 3: Sealed Chilled Dairy -->
+<article class="bg-surface-container-lowest rounded-2xl p-4 shadow-sm flex flex-col gap-3 relative overflow-hidden transition-all hover:shadow-md">
+<!-- Header: Tags & Distance -->
+<div class="flex items-center justify-between gap-2">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[16px]">ac_unit</span>
+<span>Sealed Chilled</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[16px]">navigation</span>
+<span>2.1 km away</span>
+</div>
+</div>
+<!-- Item Title & Media Placeholder -->
+<div class="flex gap-3 items-start">
+<div class="w-20 h-20 rounded-xl bg-surface-container shrink-0 overflow-hidden relative shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Chilled refrigerated cases of creamy oat milk cartons and natural Greek yogurt tubs arranged neatly on clean stainless steel shelves with frosty crisp finish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCg5ygSWxcuNlNVk2yh0aUaG6yh-oXmeXgN-epuA2VKjPY_GKWmxeKs0re5gAUWGdFxffDdnxFnAn25mjpB5YhJ_XplXofcouQT27N7Pc5205MadArz6tTlV2lgPniwUG6xbpcQ2x7zn-RphJMPbzSXTwMjjsnGORiwk8WAvZuJAhV2ovrPNhA4ZOAYkIM0MsMOluUXaBg5mBpEMPN4sap9IyyuHGBYBHwBBsDTBlH7YXRURt1vUDrT4g"/>
+<div class="absolute bottom-1 right-1 bg-inverse-surface/80 text-inverse-on-surface px-1.5 py-0.5 rounded text-[10px] font-semibold">16 Cartons</div>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="font-headline-sm text-label-lg font-bold text-on-surface leading-snug line-clamp-2">Oat Milk &amp; Greek Yogurt Cases</h3>
+<p class="font-body-sm text-label-sm text-on-surface-variant mt-1 flex items-center gap-1 truncate">
+<span class="font-medium text-on-surface">Green Grocer Co-op</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+<span class="truncate">Downtown Youth Shelter</span>
+</p>
+<div class="flex items-center gap-2 mt-1.5 flex-wrap">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium">16.0 kg • Upright Box</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/70 text-primary font-label-sm text-label-sm font-semibold">5.4 kg CO2 saved</span>
+</div>
+</div>
+</div>
+<!-- Transit Note & Route Badge -->
+<div class="bg-surface-container-low rounded-xl p-2.5 flex items-center justify-between gap-2 text-label-sm font-label-sm">
+<div class="flex items-center gap-1.5 text-on-surface-variant truncate">
+<span class="material-symbols-outlined text-[16px] text-primary shrink-0">inventory_2</span>
+<span class="truncate">Insulated transit bag required • Handle gently</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface shrink-0 font-medium">
+<span class="material-symbols-outlined text-[16px] text-secondary">directions_bike</span>
+<span>25 min run</span>
+</div>
+</div>
+<!-- Primary Accept CTA -->
+<button class="pickup-accept-btn w-full min-h-[48px] rounded-full bg-primary text-on-primary font-headline-sm text-label-lg font-bold shadow-sm flex items-center justify-center gap-2 hover:bg-primary-container transition-all active:scale-[0.99]" data-title="Oat Milk &amp; Greek Yogurt Cases">
+<span>Accept &amp; Pick Up Route</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</article>
+</section>
+<!-- Safety & Live SOS Support Bar -->
+<section class="px-space-md mt-5">
+<div class="bg-error-container/50 rounded-2xl p-3.5 flex items-center justify-between gap-3 shadow-sm">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-10 h-10 rounded-full bg-error-container text-error flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">support_agent</span>
+</div>
+<div class="min-w-0">
+<p class="font-headline-sm text-label-md font-bold text-on-surface truncate">Urgent Transit Blocker?</p>
+<p class="font-body-sm text-label-sm text-on-surface-variant truncate">Tap for Live SOS Dispatch (24/7)</p>
+</div>
+</div>
+<button aria-label="Trigger Dispatch SOS Call" class="shrink-0 min-h-[44px] px-3.5 py-1.5 rounded-full bg-error text-on-error font-headline-sm text-label-sm font-bold shadow-sm flex items-center gap-1 hover:opacity-90 active:scale-95 transition-all" id="sosBtn">
+<span class="material-symbols-outlined text-[18px]">call</span>
+<span>SOS Call</span>
+</button>
+</div>
+</section>
+</div>
+<script>
+  // Simple micro-interactions for courier toggles and route claims
+  document.addEventListener('DOMContentLoaded', () => {
+    // Mode switcher buttons
+    const modeButtons = document.querySelectorAll('.transport-btn');
+    modeButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        modeButtons.forEach(b => {
+          b.classList.remove('bg-primary', 'text-on-primary');
+          b.classList.add('bg-surface-container', 'text-on-surface-variant');
+        });
+        btn.classList.add('bg-primary', 'text-on-primary');
+        btn.classList.remove('bg-surface-container', 'text-on-surface-variant');
+      });
+    });
+
+    // Accept pickup route buttons
+    const acceptBtns = document.querySelectorAll('.pickup-accept-btn');
+    acceptBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const title = btn.getAttribute('data-title');
+        btn.innerHTML = `<span class="material-symbols-outlined text-[20px] animate-spin">sync</span><span>Claiming Route...</span>`;
+        btn.classList.add('opacity-90');
+        setTimeout(() => {
+          btn.innerHTML = `<span class="material-symbols-outlined text-[20px]">check</span><span>Route Assigned!</span>`;
+          btn.classList.remove('bg-primary');
+          btn.classList.add('bg-secondary');
+        }, 600);
+      });
+    });
+
+    // Scan QR button interaction
+    const scanBtn = document.getElementById('scanDeliveredBtn');
+    if (scanBtn) {
+      scanBtn.addEventListener('click', () => {
+        const originalContent = scanBtn.innerHTML;
+        scanBtn.innerHTML = `<span class="material-symbols-outlined text-[22px] animate-spin">camera</span><span class="font-headline-sm text-label-lg font-bold">Opening Camera...</span>`;
+        setTimeout(() => {
+          scanBtn.innerHTML = originalContent;
+        }, 1200);
+      });
+    }
+
+    // Filter Chips toggle
+    const filterChips = document.querySelectorAll('.filter-chip');
+    filterChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        filterChips.forEach(c => {
+          c.classList.remove('bg-secondary-container', 'text-on-secondary-container', 'font-semibold');
+          c.classList.add('bg-surface-container', 'text-on-surface-variant');
+        });
+        chip.classList.add('bg-secondary-container', 'text-on-secondary-container', 'font-semibold');
+        chip.classList.remove('bg-surface-container', 'text-on-surface-variant');
+      });
+    });
+
+    // SOS Alert button
+    const sosBtn = document.getElementById('sosBtn');
+    if (sosBtn) {
+      sosBtn.addEventListener('click', () => {
+        const confirmed = window.confirm("Connect immediately to FoodShare 24/7 Live Courier Emergency Dispatch?");
+        if (confirmed) {
+          alert("Connecting dispatch operator: (415) 555-0199...");
+        }
+      });
+    }
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-2px_12px_rgba(20,51,42,0.05)]" data-active-classes="text-primary-container font-semibold"><div class="flex justify-around items-center h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] flex-1 py-1 transition-colors text-primary-container font-semibold" data-path="pickups" href="#"><span class="material-symbols-outlined text-[24px]">two_wheeler</span><span class="font-label-sm text-label-sm mt-0.5">Pickups</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] flex-1 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="map-radar" href="#"><span class="material-symbols-outlined text-[24px]">radar</span><span class="font-label-sm text-label-sm mt-0.5">Map Radar</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] flex-1 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="my-rescues" href="#"><span class="material-symbols-outlined text-[24px]">inventory_2</span><span class="font-label-sm text-label-sm mt-0.5">My Rescues</span></a><a class="flex flex-col items-center justify-center min-w-[44px] min-h-[44px] flex-1 py-1 text-on-surface-variant hover:text-on-surface transition-colors" data-path="profile" href="#"><span class="material-symbols-outlined text-[24px]">person</span><span class="font-label-sm text-label-sm mt-0.5">Profile</span></a></div></nav></body></html>

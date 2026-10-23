@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>FoodShare - Community Food Rescue &amp; Sharing</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-lowest": "#ffffff", "secondary-fixed": "#c8eadc", "surface-container-low": "#eaf7ed", "surface-bright": "#f0fdf3", "inverse-primary": "#89d7a1", "secondary-fixed-dim": "#accec1", "error-container": "#ffdad6", "secondary": "#46655a", "on-primary": "#ffffff", "on-tertiary-container": "#fff0e7", "tertiary-fixed": "#ffdcc3", "surface-variant": "#d9e6dc", "surface-container": "#e4f1e7", "on-primary-fixed": "#00210e", "surface-tint": "#1a6c40", "on-secondary": "#ffffff", "outline-variant": "#bfc9be", "on-secondary-fixed": "#012018", "on-background": "#131e18", "primary-container": "#2f7d4f", "tertiary": "#854600", "on-primary-container": "#ceffd9", "surface-container-highest": "#d9e6dc", "primary-fixed": "#a4f4bc", "on-error-container": "#93000a", "on-tertiary-fixed-variant": "#6e3900", "on-surface": "#131e18", "on-error": "#ffffff", "inverse-surface": "#28332d", "tertiary-fixed-dim": "#ffb77d", "on-tertiary": "#ffffff", "on-surface-variant": "#3f4941", "background": "#f0fdf3", "surface-container-high": "#dfebe2", "error": "#ba1a1a", "surface": "#f0fdf3", "surface-dim": "#d0ddd4", "primary-fixed-dim": "#89d7a1", "primary": "#0d6438", "inverse-on-surface": "#e7f4ea", "on-secondary-container": "#4a695e", "on-primary-fixed-variant": "#00522c", "on-secondary-fixed-variant": "#2e4d43", "secondary-container": "#c5e7da", "outline": "#707a70", "on-tertiary-fixed": "#2f1500", "tertiary-container": "#a65c0d" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.5rem", "space-md": "1rem", "space-xl": "2rem", "margin-mobile": "1rem", "gutter-mobile": "1rem", "space-xs": "0.5rem", "gutter": "1.5rem", "margin": "2rem", "space-sm": "0.75rem" }, "fontFamily": { "headline-xl-mobile": ["Epilogue"], "label-md": ["Inter"], "label-lg": ["Inter"], "headline-lg": ["Epilogue"], "body-sm": ["Inter"], "headline-sm": ["Epilogue"], "headline-xl": ["Epilogue"], "label-sm": ["Inter"], "headline-md": ["Epilogue"], "headline-lg-mobile": ["Epilogue"], "body-md": ["Inter"], "body-lg": ["Inter"] }, "fontSize": { "headline-xl-mobile": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "500" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }] } } } };</script></head><body class="bg-[#FAF8F3] text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col"><header class="fixed top-0 left-0 right-0 z-50 bg-[#FAF8F3]/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(20,51,42,0.04)]"><div class="h-20 max-w-7xl mx-auto px-space-md lg:px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg flex-shrink-0"><a class="flex items-center gap-3 group" data-path="nearby-feed" href="#"><img alt="FoodShare Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Wn24S97Z_pJAXLgaY1ZIHDdJNPdHRj7nIU3hSrZ76HWEX6on8Oc3OKuQP71K2tdArc6T_mrDJ__RUi2wmYJ8RxmtIQ7xjKW0hQmL_-XLjs2BTEFsK3hilOBB40tW1qIX--aqOQXHDo8lfv9jjJXU8sXuI2aMmgp4DCKBCDOEoCTaquxufZ55HPyBIqr1uufsrKGAvXCuCKwfZqyokfaGTBz2BBeQ6L4f8Ug4RHvVte0BBdWpJZX2yho6bF"/><span class="font-headline-sm text-headline-sm text-primary tracking-tight">FoodShare</span></a><div class="hidden xl:flex items-center gap-2 px-space-sm py-1 rounded-full bg-surface-container-low shadow-[0_1px_4px_rgba(20,51,42,0.04)]"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span></span><span class="font-label-sm text-label-sm text-secondary font-medium">Live 12 rescued today</span></div></div><nav class="hidden lg:flex items-center gap-1.5 p-1 rounded-full bg-surface-container-low" data-active-classes="bg-primary-container text-on-primary font-medium shadow-[0_2px_10px_rgba(20,51,42,0.08)]"><a class="px-space-md py-2 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="nearby-feed" href="#">Nearby Feed</a><a class="px-space-md py-2 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="listing-detail" href="#">Listing Detail</a><a class="px-space-md py-2 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="post-surplus" href="#">Post Surplus</a><a aria-current="page" class="px-space-md py-2 rounded-full transition-all bg-primary-container text-on-primary font-medium shadow-[0_2px_10px_rgba(20,51,42,0.08)]" data-path="pickup-board" href="#">Pickup Board</a><a class="px-space-md py-2 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="impact-dashboard" href="#">Impact Dashboard</a></nav><div class="flex items-center gap-space-sm sm:gap-space-md flex-shrink-0"><div class="hidden sm:flex items-center p-1 rounded-full bg-surface-container-low"><button class="px-3 py-1.5 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" type="button">Receiver</button><button class="px-3 py-1.5 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" type="button">Donor</button><button class="px-3 py-1.5 rounded-full font-label-sm text-label-sm bg-primary text-on-primary shadow-[0_1px_4px_rgba(20,51,42,0.06)] font-medium transition-all" type="button">Volunteer</button></div><button aria-label="Notifications" class="relative p-2 rounded-full text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 flex h-4 min-w-[16px] px-1 items-center justify-center rounded-full bg-tertiary-container text-on-primary font-label-sm text-[10px] font-semibold leading-none">3</span></button><div class="flex items-center gap-2.5 pl-2 sm:pl-3"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBYzu0T8w9_lto0EWsnfHzRRNim1vYIcwBUs3Nv6UsA1GouxgNkbyjTYth9eNl32yhfbrulKAy5Vr12uQ7dnREzHAPDaWiJ0hRWVzloIFpf7nNgSEE2FXYCtLgdPCXGbXlJY7ci8-iPl1Vwdhp0VRh0LUI0ar0Uxu3tEA1_gPZNk2u8cRVNQZ_Ci2vrTDvvsw_aq5m3qhaoKZPc3waNeQi8SbNljtifKWAPKvEDaBvXZUU1itxDDFYyQ"/><div class="hidden md:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface font-medium leading-none">Maya Lin</span><span class="font-label-sm text-label-sm text-on-surface-variant text-[11px] mt-0.5">Neighborhood Pioneer</span></div></div></div></div></header><main class="w-full pt-20 flex-1 bg-[#FAF8F3]"><div class="flex flex-col w-full">
+<!-- Dispatch Command Canvas -->
+<div class="max-w-7xl mx-auto w-full px-space-md lg:px-margin py-space-lg flex flex-col gap-space-lg">
+<!-- Top Dispatch Header & Live Metrics -->
+<section class="flex flex-col gap-space-md">
+<div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-2 mb-1">
+<span class="inline-flex items-center justify-center w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Volunteer Courier Dispatch · Live Operations</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Active Pickup &amp; Delivery Board</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mt-1">
+            Claimed surplus batches awaiting volunteer transport to neighborhood shelters and community pantries. Every micro-rescue takes 15–25 minutes.
+          </p>
+</div>
+<!-- Mode Segmented Switch -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center gap-2 bg-surface-container-low p-1.5 rounded-full shadow-sm self-start lg:self-auto">
+<span class="font-label-sm text-label-sm text-on-surface-variant px-3 hidden sm:inline-block">Transport Mode:</span>
+<div class="flex items-center gap-1">
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full font-label-sm text-label-sm bg-primary text-on-primary font-medium shadow-sm transition-all hover:bg-primary-container" type="button">
+<span class="material-symbols-outlined text-[16px]">pedal_bike</span>
+<span>Bicycle / Cargo</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">directions_walk</span>
+<span>On Foot</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">electric_car</span>
+<span>Electric / Car</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Quick Metrics Ribbon -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-sm md:gap-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-[0_4px_20px_rgba(20,51,42,0.04)] flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary flex-shrink-0">
+<span class="material-symbols-outlined text-xl">pending_actions</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold leading-tight">5 Batches</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Needing pickup now</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-[0_4px_20px_rgba(20,51,42,0.04)] flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-xl">task_alt</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold leading-tight">2 Rescues</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">38 kg · 12.4 kg CO₂e saved</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-[0_4px_20px_rgba(20,51,42,0.04)] flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-secondary flex-shrink-0">
+<span class="material-symbols-outlined text-xl">timer</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold leading-tight">18 mins</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Avg transit duration</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-[0_4px_20px_rgba(20,51,42,0.04)] flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">eco</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold leading-tight">99.4%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Safe courier rating</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Two-Column Workflow -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: Dispatch Queue & Active Missions (approx 58-60%) -->
+<section class="lg:col-span-7 flex flex-col gap-space-md">
+<!-- CURRENT IN-TRANSIT CARD (Sticky Hero Activity) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_4px_20px_rgba(20,51,42,0.06)] overflow-hidden transition-all duration-200">
+<!-- Top alert bar for in-transit state -->
+<div class="bg-[#3B82C4]/10 px-space-md py-2.5 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#3B82C4] text-white font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-xs">directions_bike</span>
+<span>IN TRANSIT · Step 3 of 4</span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant hidden sm:inline">Active Courier Run</span>
+</div>
+<div class="flex items-center gap-1.5 text-[#3B82C4] font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span>ETA: 17:42 (15m left)</span>
+</div>
+</div>
+<div class="p-space-md lg:p-space-lg flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-space-sm">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">18 Gourmet Grain Bowls &amp; Fresh Salads</h3>
+<div class="flex items-center flex-wrap gap-2 mt-1">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary bg-surface-container px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-xs">scale</span> 9.0 kg
+                  </span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary bg-surface-container px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-xs">shopping_bag</span> 3 Thermal Bags
+                  </span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary bg-secondary-fixed px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-xs">verified</span> Inspected Safe
+                  </span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-low px-2.5 py-1 rounded-full self-start">
+                Picked up at 17:15
+              </span>
+</div>
+<!-- Route Track Micro-Timeline -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col gap-3">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-lg mt-0.5" style="font-variation-settings: 'FILL' 1;">trip_origin</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-medium">Origin Donor</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Harvest Kitchen Catering</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">442 Elm St, Suite 104 (Completed at 17:15)</span>
+</div>
+</div>
+<div class="ml-2 pl-4 border-l-2 border-dashed border-[#3B82C4]/40 py-1">
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-[#3B82C4]">
+<span class="material-symbols-outlined text-sm">navigation</span>
+<span>Currently moving west on 4th St · 1.1 km to dropoff</span>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary-container text-lg mt-0.5" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-medium">Drop-off Destination</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">St. Jude Community Shelter</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">820 Folsom St · Deliver to side intake desk</span>
+</div>
+</div>
+</div>
+<!-- In-Transit Actions -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-space-sm pt-1">
+<div class="flex items-center gap-2">
+<button class="px-3.5 py-2 rounded-full font-label-md text-label-md text-on-surface bg-surface-container-high hover:bg-surface-variant transition-colors flex items-center justify-center gap-1.5 shadow-sm" type="button">
+<span class="material-symbols-outlined text-base">near_me</span>
+<span>Turn-by-Turn GPS</span>
+</button>
+<button class="px-3.5 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-base">call</span>
+<span>Call Receiver</span>
+</button>
+</div>
+<button class="px-5 py-2.5 rounded-full font-label-md text-label-md bg-primary hover:bg-primary-container text-on-primary font-medium flex items-center justify-center gap-2 shadow-sm transition-all hover:-translate-y-0.5" type="button">
+<span class="material-symbols-outlined text-base">task_alt</span>
+<span>Mark Delivered &amp; Scan QR</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Filter & Sorting Control Bar -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pt-2">
+<!-- Filter chips -->
+<div class="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0 scrollbar-none">
+<button class="px-3 py-1.5 rounded-full font-label-sm text-label-sm bg-secondary-fixed text-primary font-medium flex-shrink-0" type="button">
+              All Pending (5)
+            </button>
+<button class="px-3 py-1.5 rounded-full font-label-sm text-label-sm bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container hover:text-on-surface flex-shrink-0 transition-colors shadow-sm" type="button">
+              Expiring Soon (&lt;45m) (2)
+            </button>
+<button class="px-3 py-1.5 rounded-full font-label-sm text-label-sm bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container hover:text-on-surface flex-shrink-0 transition-colors shadow-sm" type="button">
+              Heavy Cargo (&gt;15kg) (1)
+            </button>
+<button class="px-3 py-1.5 rounded-full font-label-sm text-label-sm bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container hover:text-on-surface flex-shrink-0 transition-colors shadow-sm" type="button">
+              Bike Friendly (4)
+            </button>
+</div>
+<!-- Sort select dropdown -->
+<div class="flex items-center gap-1 text-on-surface-variant self-end sm:self-auto flex-shrink-0">
+<span class="material-symbols-outlined text-sm">tune</span>
+<select class="bg-transparent font-label-sm text-label-sm text-on-surface font-medium focus:outline-none cursor-pointer">
+<option>Distance: Closest first (0.4 km)</option>
+<option>Urgency: Pickup deadline</option>
+<option>Weight: Light to Heavy</option>
+</select>
+</div>
+</div>
+<!-- QUEUE CARD 1: Bakery Goods (High Urgency) -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md lg:p-space-lg shadow-[0_4px_20px_rgba(20,51,42,0.04)] hover:shadow-[0_8px_28px_rgba(20,51,42,0.08)] transition-all duration-200 flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row gap-space-md">
+<!-- Food Image -->
+<div class="w-full sm:w-36 h-36 rounded-lg overflow-hidden flex-shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="Rustic freshly baked artisanal sourdough loaves and golden baguettes stacked neatly in woven baskets with soft morning sunlight highlighting the flour dusted crusts in a local bakery setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvLpew-oDBIrnKTl56mb80u1fAHk31u2_J8DCIHEQnJJyT1FHZo2c_t5ulJsNuNoXozm4qt5CnM2OqXYTAm42-ufIv5R5OOj5InHBjeVmapSmUIieuXRDwtGtgp-Pbh_pIsQqnaLy-RuHeBpou69_WCBQumv92BKpn0ALfgH6xCYtnt0XSFA8BJFp-TTW5VGLgU45HgNUVXE8a0rqQScM4Pox6k8vlGrVVRrZR39cNECRde-pX2Pt5DQ"/>
+<div class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-[#E0A526] text-white font-label-sm text-[11px] font-semibold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[13px]">pan_tool</span>
+<span>Claimed</span>
+</div>
+</div>
+<!-- Listing Details -->
+<div class="flex-1 flex flex-col justify-between min-w-0">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between gap-2">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#F2994A]/15 text-[#854600] font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-xs">alarm</span>
+<span>Expiring in 38m</span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">straighten</span> 1.6 km route
+                  </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate mt-1">
+                  Artisan Sourdough &amp; French Baguettes
+                </h3>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="font-medium text-on-surface">The Daily Loaf Bakery</span>
+<span>•</span>
+<span>0.8 km away</span>
+</div>
+</div>
+<!-- Cargo Specs & Route Summary -->
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-2 mt-2 pt-2 bg-surface-container-low p-2.5 rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Volume &amp; Weight</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">14.2 kg (~28 loaves)</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Storage Type</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Dry / Fragile Stack</span>
+</div>
+<div class="flex flex-col col-span-2 sm:col-span-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Drop-off Hub</span>
+<span class="font-label-md text-label-md text-primary font-semibold truncate">Mission Family Pantry</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Handover Note -->
+<div class="flex items-start gap-2 bg-[#FFF7EB] p-2.5 rounded-lg text-on-tertiary-fixed-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-tertiary text-base mt-0.5">info</span>
+<span>Handover note: Rear alley delivery gate code <strong>#4412</strong>. Knock twice and ask for Chef Carlos.</span>
+</div>
+<!-- Bottom Action Strip -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-1">
+<div class="flex items-center gap-3 text-secondary font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">schedule</span> Est. run: 18 mins
+              </span>
+<span>•</span>
+<span class="flex items-center gap-1 text-primary font-medium">
+<span class="material-symbols-outlined text-sm">eco</span> 4.8 kg CO₂ offset
+              </span>
+</div>
+<button class="w-full sm:w-auto px-5 py-2.5 rounded-full font-label-md text-label-md bg-primary hover:bg-primary-container text-on-primary font-medium flex items-center justify-center gap-2 shadow-sm transition-all hover:-translate-y-0.5" type="button">
+<span>Accept &amp; Pick Up Route</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- QUEUE CARD 2: Fresh Produce (Crate / Heavy Cargo) -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md lg:p-space-lg shadow-[0_4px_20px_rgba(20,51,42,0.04)] hover:shadow-[0_8px_28px_rgba(20,51,42,0.08)] transition-all duration-200 flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row gap-space-md">
+<!-- Food Image -->
+<div class="w-full sm:w-36 h-36 rounded-lg overflow-hidden flex-shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="Crates of crisp organic romaine lettuce heads and deep red vine ripened tomatoes freshly harvested and packed with water droplets in an eco grocery cold room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPy93-1nFva3ssLyYHscX2eDnJzsojotu1gpkTZ-ofClXDbqtz8_my1ihnA37cJs3UyT5v0KMfPQL6VWSSM7DGhzAIQ39C2kxVy_6g1lcHKHrIR3_DrBTvk6lutsG16Q9f1A0U_-dmQ-1Bg7VXPg0-04_0F0cbCVW77C4aj6SCURxauTIfb1pB3P3R2GPj35AZElApXfv7umLEJORjHX0CvjV6JewEoqtjBu4DgLcDUvaie65v_JP2Jw"/>
+<div class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-[#E0A526] text-white font-label-sm text-[11px] font-semibold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[13px]">pan_tool</span>
+<span>Claimed</span>
+</div>
+</div>
+<!-- Listing Details -->
+<div class="flex-1 flex flex-col justify-between min-w-0">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between gap-2">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs">hourglass_top</span>
+<span>Ready 25m ago · Window: 1h 15m</span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">straighten</span> 2.4 km route
+                  </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate mt-1">
+                  Fresh Organic Romaine &amp; Vine Tomatoes
+                </h3>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="font-medium text-on-surface">Valley Green Market</span>
+<span>•</span>
+<span>1.2 km away</span>
+</div>
+</div>
+<!-- Cargo Specs & Route Summary -->
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-2 mt-2 pt-2 bg-surface-container-low p-2.5 rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Volume &amp; Weight</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">22.0 kg crate</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Vehicle Suggestion</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Cargo Bike / Car</span>
+</div>
+<div class="flex flex-col col-span-2 sm:col-span-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Drop-off Hub</span>
+<span class="font-label-md text-label-md text-primary font-semibold truncate">Eastside Comm. Kitchen</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Action Strip -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-1">
+<div class="flex items-center gap-3 text-secondary font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">schedule</span> Est. run: 22 mins
+              </span>
+<span>•</span>
+<span class="flex items-center gap-1 text-primary font-medium">
+<span class="material-symbols-outlined text-sm">eco</span> 7.2 kg CO₂ offset
+              </span>
+</div>
+<button class="w-full sm:w-auto px-5 py-2.5 rounded-full font-label-md text-label-md bg-primary hover:bg-primary-container text-on-primary font-medium flex items-center justify-center gap-2 shadow-sm transition-all hover:-translate-y-0.5" type="button">
+<span>Accept &amp; Pick Up Route</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+</article>
+<!-- QUEUE CARD 3: Dairy & Plant Milks -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md lg:p-space-lg shadow-[0_4px_20px_rgba(20,51,42,0.04)] hover:shadow-[0_8px_28px_rgba(20,51,42,0.08)] transition-all duration-200 flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row gap-space-md">
+<!-- Food Image -->
+<div class="w-full sm:w-36 h-36 rounded-lg overflow-hidden flex-shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="Chilled organic oat milk cartons and sealed Greek yogurt tubs placed in insulated transport boxes inside an artisan co-op grocery refrigerated dispatch area" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQbSqSZYJCyx4FTdtEjv48aNwkf_JrvhY6FzaOPpH1oHbQv-QXHvSG-bgF7gBBs0t2iqtnfp2xxQqae4K_HY_7f7GLVT9uKvGayVeGPFooxeoqAIRZtxKKh21GiNIqqVMoEsbLShrJe0rXZOs1f6Wnuk17SpiSndlblnBoKL0wvRdEoBGYYPdLxd_wqWwha0IyQ42rQdSLeaJM8-wxUz8JFXCWi8gcFjJXag95lqIvowbnz5b4Pgf48g"/>
+<div class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-[#E0A526] text-white font-label-sm text-[11px] font-semibold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[13px]">pan_tool</span>
+<span>Claimed</span>
+</div>
+</div>
+<!-- Listing Details -->
+<div class="flex-1 flex flex-col justify-between min-w-0">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between gap-2">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-xs">ac_unit</span>
+<span>Sealed Cold Packs</span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">straighten</span> 3.0 km route
+                  </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate mt-1">
+                  Oat Milk &amp; Greek Yogurt Cases
+                </h3>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="font-medium text-on-surface">Green Grocer Co-op</span>
+<span>•</span>
+<span>2.1 km away</span>
+</div>
+</div>
+<!-- Cargo Specs & Route Summary -->
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-2 mt-2 pt-2 bg-surface-container-low p-2.5 rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Volume &amp; Weight</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">16.0 kg carton</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Handling</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Chilled / Upright</span>
+</div>
+<div class="flex flex-col col-span-2 sm:col-span-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Drop-off Hub</span>
+<span class="font-label-md text-label-md text-primary font-semibold truncate">Downtown Youth Shelter</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Action Strip -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-1">
+<div class="flex items-center gap-3 text-secondary font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">schedule</span> Est. run: 25 mins
+              </span>
+<span>•</span>
+<span class="flex items-center gap-1 text-primary font-medium">
+<span class="material-symbols-outlined text-sm">eco</span> 5.4 kg CO₂ offset
+              </span>
+</div>
+<button class="w-full sm:w-auto px-5 py-2.5 rounded-full font-label-md text-label-md bg-primary hover:bg-primary-container text-on-primary font-medium flex items-center justify-center gap-2 shadow-sm transition-all hover:-translate-y-0.5" type="button">
+<span>Accept &amp; Pick Up Route</span>
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+</article>
+</section>
+<!-- RIGHT COLUMN: Interactive Route & Live Dispatch Radar (approx 40-42%) -->
+<aside class="lg:col-span-5 flex flex-col gap-space-md sticky top-24">
+<!-- Route Visualizer & Map Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_4px_20px_rgba(20,51,42,0.06)] overflow-hidden">
+<div class="p-space-md flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">map</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Courier Radar &amp; Route</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">5.0 km active dispatch coverage</p>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-primary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+              Live GPS
+            </span>
+</div>
+<!-- Stylized Inline SVG Map of Courier Urban Route -->
+<div class="relative w-full h-64 bg-[#E8F1EC] overflow-hidden">
+<svg class="w-full h-full" fill="none" viewbox="0 0 460 260" xmlns="http://www.w3.org/2000/svg">
+<!-- City Grid Lines -->
+<path d="M-10 40H480M-10 90H480M-10 140H480M-10 190H480M-10 240H480" stroke="#D1E2D7" stroke-width="2"></path>
+<path d="M50 -10V280M110 -10V280M180 -10V280M250 -10V280M320 -10V280M390 -10V280" stroke="#D1E2D7" stroke-width="2"></path>
+<!-- Parks & Green Zones -->
+<rect fill="#D9EADF" height="50" rx="12" width="80" x="260" y="30"></rect>
+<rect fill="#D9EADF" height="70" rx="12" width="90" x="70" y="150"></rect>
+<!-- Water / Canal accent -->
+<path d="M430 -10C410 80 435 180 410 280" stroke="#C5DCEB" stroke-linecap="round" stroke-width="24"></path>
+<!-- Active Route Path -->
+<path d="M 85 85 L 180 85 L 180 145 L 340 145 L 340 200" stroke="#2F7D4F" stroke-dasharray="6 6" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"></path>
+<!-- Radar concentric range circles from courier -->
+<circle cx="180" cy="115" fill="#2F7D4F" fill-opacity="0.04" r="45" stroke="#2F7D4F" stroke-opacity="0.25" stroke-width="1"></circle>
+<circle cx="180" cy="115" r="85" stroke="#2F7D4F" stroke-opacity="0.15" stroke-width="1"></circle>
+<!-- Waypoint: Origin (The Daily Loaf Bakery) -->
+<g transform="translate(85, 85)">
+<circle fill="#2F7D4F" r="12"></circle>
+<circle fill="#FFFFFF" r="5"></circle>
+<rect fill="#14332A" height="20" rx="6" width="88" x="-44" y="-32"></rect>
+<text fill="#FFFFFF" font-family="Inter" font-size="9" font-weight="600" text-anchor="middle" x="0" y="-18">Daily Loaf Bakery</text>
+</g>
+<!-- Waypoint: Current Courier Location (Pulsing Bicycle) -->
+<g transform="translate(180, 120)">
+<circle class="shadow-md" fill="#3B82C4" r="14"></circle>
+<circle class="animate-ping" opacity="0.4" r="22" stroke="#3B82C4" stroke-width="2"></circle>
+<path d="M-6 -2C-6 -5 -3 -7 0 -7C3 -7 6 -5 6 -2C6 2 0 6 0 6C0 6 -6 2 -6 -2Z" fill="#FFFFFF"></path>
+<circle cx="-3" cy="2" fill="none" r="2.5" stroke="#FFFFFF" stroke-width="1.2"></circle>
+<circle cx="3" cy="2" fill="none" r="2.5" stroke="#FFFFFF" stroke-width="1.2"></circle>
+</g>
+<!-- Waypoint: Destination (St. Jude Shelter) -->
+<g transform="translate(340, 200)">
+<circle fill="#E0A526" r="12"></circle>
+<circle fill="#FFFFFF" r="5"></circle>
+<rect fill="#14332A" height="20" rx="6" width="84" x="-42" y="-32"></rect>
+<text fill="#FFFFFF" font-family="Inter" font-size="9" font-weight="600" text-anchor="middle" x="0" y="-18">St. Jude Shelter</text>
+</g>
+</svg>
+<!-- Map Overlay Quick Action -->
+<button class="absolute bottom-3 right-3 bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1.5 rounded-full font-label-sm text-label-sm text-on-surface shadow-md hover:bg-surface-container-lowest flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-sm">fullscreen</span>
+<span>Full Screen View</span>
+</button>
+</div>
+<!-- Waypoints Accordion / Summary -->
+<div class="p-space-md flex flex-col gap-3 bg-surface-container-lowest">
+<div class="flex items-center justify-between pb-2 border-b border-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+<span class="font-medium text-on-surface">Route Overview: 2.2 km total</span>
+<span class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-xs">trending_up</span> Flat (+12m)
+              </span>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-2">
+<span class="w-5 h-5 rounded-full bg-secondary-fixed text-primary font-label-sm text-xs flex items-center justify-center font-bold">1</span>
+<span class="text-on-surface font-medium">Pickup: 442 Elm St</span>
+</div>
+<span class="text-on-surface-variant font-label-sm text-label-sm">0.8 km (~4 mins)</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-2">
+<span class="w-5 h-5 rounded-full bg-tertiary-fixed text-tertiary font-label-sm text-xs flex items-center justify-center font-bold">2</span>
+<span class="text-on-surface font-medium">Dropoff: 820 Folsom St</span>
+</div>
+<span class="text-on-surface-variant font-label-sm text-label-sm">1.4 km (~8 mins)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Volunteer Courier Safety & Equipment Checklist -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-[0_4px_20px_rgba(20,51,42,0.04)] flex flex-col gap-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">health_and_safety</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold text-lg">Safe Courier Protocol</h4>
+</div>
+<div class="flex flex-col gap-2 pt-1 font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-base mt-0.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span><strong>Thermal Bag Ready:</strong> Ensure cold cartons remain below 4°C during active runs.</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-base mt-0.5" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span><strong>Contactless QR Intake:</strong> Recipient pantry will scan your volunteer verification badge upon dropoff.</span>
+</div>
+</div>
+<!-- Hotline / SOS Button -->
+<div class="mt-2 pt-2 border-t border-surface-container-high flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Urgent transit blocker?</span>
+<button class="text-error font-label-sm text-label-sm font-semibold flex items-center gap-1 hover:underline" type="button">
+<span class="material-symbols-outlined text-sm">support_agent</span>
+<span>Live SOS Dispatch Hotline</span>
+</button>
+</div>
+</div>
+<!-- Volunteer Impact & Level Card -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-[0_4px_20px_rgba(20,51,42,0.04)] flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<img alt="Maya Lin profile" class="w-10 h-10 rounded-full object-cover ring-2 ring-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBYzu0T8w9_lto0EWsnfHzRRNim1vYIcwBUs3Nv6UsA1GouxgNkbyjTYth9eNl32yhfbrulKAy5Vr12uQ7dnREzHAPDaWiJ0hRWVzloIFpf7nNgSEE2FXYCtLgdPCXGbXlJY7ci8-iPl1Vwdhp0VRh0LUI0ar0Uxu3tEA1_gPZNk2u8cRVNQZ_Ci2vrTDvvsw_aq5m3qhaoKZPc3waNeQi8SbNljtifKWAPKvEDaBvXZUU1itxDDFYyQ"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Maya Lin</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Level 4 Courier · 48 Rescues</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-lowest text-primary font-label-sm text-label-sm font-semibold shadow-sm">
+<span class="material-symbols-outlined text-sm text-[#E0A526]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>5.0</span>
+</span>
+</div>
+<!-- Progress to next tier -->
+<div class="flex flex-col gap-1.5 pt-1">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Milestone: Century Rider (100)</span>
+<span class="text-on-surface font-semibold">48 / 100</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all duration-500" style="width: 48%"></div>
+</div>
+<span class="font-label-sm text-[11px] text-on-surface-variant">52 rescues to reach Lifetime Free Bicycle Maintenance Perk</span>
+</div>
+</div>
+</aside>
+</div>
+</div>
+</div></main><footer class="w-full bg-surface-container-low mt-auto"><div class="max-w-7xl mx-auto px-space-md lg:px-margin py-space-xl"><div class="grid grid-cols-1 md:grid-cols-12 gap-space-lg pb-space-lg"><div class="md:col-span-5 flex flex-col gap-space-sm"><div class="flex items-center gap-2"><img alt="FoodShare Logo" class="h-6 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Wn24S97Z_pJAXLgaY1ZIHDdJNPdHRj7nIU3hSrZ76HWEX6on8Oc3OKuQP71K2tdArc6T_mrDJ__RUi2wmYJ8RxmtIQ7xjKW0hQmL_-XLjs2BTEFsK3hilOBB40tW1qIX--aqOQXHDo8lfv9jjJXU8sXuI2aMmgp4DCKBCDOEoCTaquxufZ55HPyBIqr1uufsrKGAvXCuCKwfZqyokfaGTBz2BBeQ6L4f8Ug4RHvVte0BBdWpJZX2yho6bF"/><span class="font-headline-sm text-headline-sm text-primary">FoodShare</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Connecting local neighborhood surpluses, community kitchens, and mindful households to eliminate edible food waste and promote accessible nutrition.</p><div class="flex items-center gap-space-md pt-2"><div class="flex items-center gap-1.5 font-label-sm text-label-sm text-secondary"><span class="material-symbols-outlined text-base text-primary">eco</span><span>48.2k kg CO2 avoided</span></div><div class="flex items-center gap-1.5 font-label-sm text-label-sm text-secondary"><span class="material-symbols-outlined text-base text-primary">volunteer_activism</span><span>19,410 meals shared</span></div></div></div><div class="md:col-span-2 sm:col-span-4 flex flex-col gap-2"><h4 class="font-label-lg text-label-lg text-on-surface font-semibold mb-1">Rescue Network</h4><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="nearby-feed" href="#">Neighborhood Feed</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="post-surplus" href="#">Donate Food</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="pickup-board" href="#">Volunteer Couriers</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Pantry Partners</a></div><div class="md:col-span-2 sm:col-span-4 flex flex-col gap-2"><h4 class="font-label-lg text-label-lg text-on-surface font-semibold mb-1">Nutrition &amp; Trust</h4><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Food Safety Protocols</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Dietary Guidelines</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="impact-dashboard" href="#">Open Impact Data</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Community Guidelines</a></div><div class="md:col-span-3 sm:col-span-4 flex flex-col gap-2"><h4 class="font-label-lg text-label-lg text-on-surface font-semibold mb-1">Open Platform</h4><p class="font-body-sm text-body-sm text-on-surface-variant">Built on open data standards and volunteer community governance. Free forever for local recipients.</p><div class="flex items-center gap-2 pt-2"><span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-highest font-label-sm text-label-sm text-on-surface-variant"><span class="material-symbols-outlined text-xs">verified_user</span>Safe Handling Verified</span></div></div></div><div class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-4 font-label-sm text-label-sm text-on-surface-variant"><p>© 2025 FoodShare Community Collective. All rights reserved.</p><div class="flex items-center gap-space-lg"><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a><a class="hover:text-primary transition-colors" href="#">Terms of Service</a><a class="hover:text-primary transition-colors" href="#">Transparency Registry</a></div></div></div></footer></body></html>
